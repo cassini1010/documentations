@@ -200,6 +200,21 @@ print(sys.get_int_max_str_digits()) #4300
 sys.set_int_max_str_digits() # used to set it to a desired value
 ```
 
+## 
+
+## string formatters
+
+| Expr   | Meaning                                      | Example                          |
+| ------ | -------------------------------------------- | -------------------------------- |
+| {:d}   | integer value                                | "{0:.0f}".format(10.5) → '10'    |
+| {:.2f} | floating point with that many decimals       | '{:.2f}'.format(0.5) → '0.50'    |
+| {:.2s} | string with that many characters             | '{:.2s}'.format('Python') → 'Py' |
+| {:<6s} | string aligned to the left that many spaces  | '{:<6s}'.format('Py') → 'Py    ' |
+| {:>6s} | string aligned to the right that many spaces | '{:>6s}'.format('Py') → '    Py' |
+| {:^6s} | string centered in that many spaces          | '{:^6s}'.format('Py') → '  Py  ' |
+
+
+
 ## Queues
 
 FIFO
