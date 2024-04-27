@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
       
       
 
@@ -491,7 +491,7 @@
         
   
   <span class="md-ellipsis">
-    How to manage logging:
+    Pytest
   </span>
   
 
@@ -878,8 +878,26 @@ sys.set_int_max_str_digits() # used to set it to a desired value
 <h2 id="stack">Stack</h2>
 <p>LIFO</p>
 <h2 id="dequedouble-ended-queue">Deque(Double ended queue)</h2>
-<p>It combines and extends the idea behind the stack and a queue. Deque can work as FIFO or LIFO </p>
-<h2 id="priority-queue">Priority queue</h2>
+<p>It combines and extends the idea behind the stack and a queue. Deque can work as FIFO or LIFO</p>
+<h1 id="python-object-oriented-concepts">Python Object Oriented Concepts</h1>
+<p>Methods in Python fall into several categories: </p>
+<ul>
+<li>
+<p>Instance methods</p>
+</li>
+<li>
+<p>Class methods</p>
+</li>
+<li>
+<p>Static methods</p>
+</li>
+</ul>
+<h2 id="instance-method">Instance Method</h2>
+<p><strong>Instance methods</strong> are the most common type of methods in Python. You define instance methods within a class by creating functions inside the class definition. When you instantiate instances of a class, those individual instances can have their methods called so the program can control and modify those instances directly. Instance methods can take a parameter called self, which represents the instance the method is being executed on, that allows you to access attributes of the instance using dot notation, like self.name, which will access the name attribute of that specific instance of the class object. When you have variables that contain different values for different instances, these are called instance variables.</p>
+<h2 id="class-methods"><strong>Class methods</strong></h2>
+<p><strong>Class methods</strong>, on the other hand, are called for the class itself instead of an instance. They are marked with a @classmethod decorator and take a cls parameter that points to the class—and not any specific instance—when the method is called. One common use-case for class methods is to create and modify data structures that contain records for all instances of a class. Usually, programmers make a list inside the class definition, and methods to add instances of the class to that list in order to keep track of that class. </p>
+<h2 id="static-methods"><strong>Static methods</strong></h2>
+<p>Lastly, static methods, marked with a @staticmethod decorator, do not take a self or a cls parameter. Static methods behave like plain functions, except that you can call them directly from the class. It is important to note that you do not have to actually instantiate the class, the methods just reside in there. This is because class definitions are themselves an object (i.e., an instance of abstract base class), which reduces overhead and allows functions to be encapsulated in an easy-to-use encapsulation. Programmers use static methods when the method does not need to access any instance or class-specific data.</p>
 
 
 
@@ -929,7 +947,7 @@ sys.set_int_max_str_digits() # used to set it to a desired value
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
   </body>
