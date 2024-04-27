@@ -213,8 +213,6 @@ sys.set_int_max_str_digits() # used to set it to a desired value
 | {:>6s} | string aligned to the right that many spaces | '{:>6s}'.format('Py') → '    Py' |
 | {:^6s} | string centered in that many spaces          | '{:^6s}'.format('Py') → '  Py  ' |
 
-
-
 ## Queues
 
 FIFO
@@ -229,6 +227,26 @@ LIFO
 
 ## Deque(Double ended queue)
 
-It combines and extends the idea behind the stack and a queue. Deque can work as FIFO or LIFO 
+It combines and extends the idea behind the stack and a queue. Deque can work as FIFO or LIFO
 
-## Priority queue
+# Python Object Oriented Concepts
+
+Methods in Python fall into several categories: 
+
+- Instance methods
+
+- Class methods
+
+- Static methods
+
+## Instance Method
+
+**Instance methods** are the most common type of methods in Python. You define instance methods within a class by creating functions inside the class definition. When you instantiate instances of a class, those individual instances can have their methods called so the program can control and modify those instances directly. Instance methods can take a parameter called self, which represents the instance the method is being executed on, that allows you to access attributes of the instance using dot notation, like self.name, which will access the name attribute of that specific instance of the class object. When you have variables that contain different values for different instances, these are called instance variables.
+
+## **Class methods**
+
+**Class methods**, on the other hand, are called for the class itself instead of an instance. They are marked with a @classmethod decorator and take a cls parameter that points to the class—and not any specific instance—when the method is called. One common use-case for class methods is to create and modify data structures that contain records for all instances of a class. Usually, programmers make a list inside the class definition, and methods to add instances of the class to that list in order to keep track of that class. 
+
+## **Static methods**
+
+Lastly, static methods, marked with a @staticmethod decorator, do not take a self or a cls parameter. Static methods behave like plain functions, except that you can call them directly from the class. It is important to note that you do not have to actually instantiate the class, the methods just reside in there. This is because class definitions are themselves an object (i.e., an instance of abstract base class), which reduces overhead and allows functions to be encapsulated in an easy-to-use encapsulation. Programmers use static methods when the method does not need to access any instance or class-specific data.
