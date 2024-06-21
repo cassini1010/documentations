@@ -16,15 +16,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
     
     
       
-        <title>How to manage logging: - My Docs</title>
+        <title>Pytest - My Docs</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
       
       
 
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-manage-logging" class="md-skip">
+        <a href="#pytest" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to manage logging:
+              Pytest
             
           </span>
         </div>
@@ -424,7 +424,7 @@
           
   
   <span class="md-ellipsis">
-    How to manage logging:
+    Pytest
   </span>
   
 
@@ -435,7 +435,7 @@
         
   
   <span class="md-ellipsis">
-    How to manage logging:
+    Pytest
   </span>
   
 
@@ -457,6 +457,136 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__tracebackhide__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __tracebackhide__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcomes-of-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      outcomes of test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-expected-exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing expected exception
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest fixtures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pytest fixtures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tracing-fixture-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      tracing fixture execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-where-fixtures-are-defined" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding where fixtures are defined
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameterization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameterizing-test-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterizing test function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-one-test-when-parameterized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting one test when parameterized
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterizing-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterizing fixture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterize-using-hook-function-pytest_generate_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterize using hook function pytest_generate_test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-manage-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to manage logging:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#a-basic-example" class="md-nav__link">
     <span class="md-ellipsis">
       A basic example:
@@ -470,15 +600,6 @@
   <a href="#print-logging-statements-to-console" class="md-nav__link">
     <span class="md-ellipsis">
       Print logging statements to console:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
     </span>
   </a>
   
@@ -499,6 +620,11 @@
       Print logging and print statements to console and log file:
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -622,6 +748,136 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#__tracebackhide__" class="md-nav__link">
+    <span class="md-ellipsis">
+      __tracebackhide__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outcomes-of-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      outcomes of test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-expected-exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing expected exception
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytest-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      pytest fixtures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pytest fixtures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tracing-fixture-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      tracing fixture execution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finding-where-fixtures-are-defined" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finding where fixtures are defined
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameterization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameterization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameterizing-test-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterizing test function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-one-test-when-parameterized" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selecting one test when parameterized
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterizing-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterizing fixture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterize-using-hook-function-pytest_generate_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterize using hook function pytest_generate_test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-manage-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to manage logging:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#a-basic-example" class="md-nav__link">
     <span class="md-ellipsis">
       A basic example:
@@ -635,15 +891,6 @@
   <a href="#print-logging-statements-to-console" class="md-nav__link">
     <span class="md-ellipsis">
       Print logging statements to console:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
     </span>
   </a>
   
@@ -671,6 +918,11 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -687,8 +939,206 @@
                   
 
 
-<h1 id="how-to-manage-logging">How to manage logging:</h1>
-<h4 id="a-basic-example">A basic example:</h4>
+<h1 id="pytest">Pytest</h1>
+<h2 id="getting-started">Getting started</h2>
+<h3 id="__tracebackhide__"><code>__tracebackhide__</code></h3>
+<p>The assert_identical function sets <strong>tracebackhide</strong> = True. This is optional. The effect
+will be that failing tests will not include this function in the traceback.</p>
+<pre><code class="language-python">from cards import Card
+import pytest
+
+
+def assert_identical(c1: Card, c2: Card):
+    __tracebackhide__ = True
+    assert c1 == c2
+    if c1.id != c2.id:
+        pytest.fail(f&quot;id's don't match. {c1.id} != {c2.id}&quot;)
+
+
+def test_identical():
+    c1 = Card(&quot;foo&quot;, id=123)
+    c2 = Card(&quot;foo&quot;, id=123)
+    assert_identical(c1, c2)
+
+
+def test_identical_fail():
+    c1 = Card(&quot;foo&quot;, id=123)
+    c2 = Card(&quot;foo&quot;, id=456)
+    assert_identical(c1, c2)
+</code></pre>
+<h3 id="outcomes-of-test">outcomes of test</h3>
+<p>Outcomes of test can be</p>
+<pre><code class="language-shell">PASSED (.)
+FAILED (F)
+XPASS (X) 
+XFAIL (x)
+SKIPPED (s)
+ERROR (E)
+</code></pre>
+<h3 id="testing-expected-exception">Testing expected exception</h3>
+<p>The normal try-catch block is not suitable for testing expected exceptions. Below code passes if exceptinois raised and fails if it is not raised. But a try-catch block passes the test if exception is raised and caught and it also passes the test of the exception is not raised.</p>
+<pre><code class="language-python">import cards
+import pytest
+
+
+# suggested way to test expected exception
+def test_no_path_fail():
+    with pytest.raises(TypeError):
+        cards.CardsDB()
+</code></pre>
+<h2 id="pytest-fixtures">pytest fixtures</h2>
+<p>Below example code represents fixtures in pytest, where first test passes, second results in Error and third fails.</p>
+<pre><code class="language-python">&quot;&quot;&quot;Demonstrate simple fixtures.&quot;&quot;&quot;
+
+import pytest
+
+
+@pytest.fixture()
+def some_data():
+    &quot;&quot;&quot;Return answer to ultimate question.&quot;&quot;&quot;
+    return 42
+def test_some_data(some_data):
+    &quot;&quot;&quot;Use fixture return value in a test.&quot;&quot;&quot;
+    assert some_data == 42
+
+
+
+
+@pytest.fixture()
+def some_other_data():
+    &quot;&quot;&quot;Raise an exception from fixture.&quot;&quot;&quot;
+    x = 43
+    assert x == 42
+    return x
+
+
+def test_other_data(some_other_data):
+    &quot;&quot;&quot;Try to use failing fixture.&quot;&quot;&quot;
+    assert some_other_data == 42
+
+
+
+
+@pytest.fixture()
+def a_tuple():
+    &quot;&quot;&quot;Return something more interesting.&quot;&quot;&quot;
+    return (1, &quot;foo&quot;, None, {&quot;bar&quot;: 23})
+
+
+def test_a_tuple(a_tuple):
+    &quot;&quot;&quot;Demo the a_tuple fixture.&quot;&quot;&quot;
+    assert a_tuple[3][&quot;bar&quot;] == 32
+
+
+&gt;&gt;&gt; test_fixtures.py::test_some_data PASSED                                                                                                      [ 33%]
+&gt;&gt;&gt; test_fixtures.py::test_other_data ERROR                                                                                                      [ 66%]
+&gt;&gt;&gt; test_fixtures.py::test_a_tuple FAILED  
+</code></pre>
+<p><strong>If a test results in “Fail,” the failure is somewhere in the test function (or something the function called). If a test results in “Error,” the failure is somewhere in a fixture.</strong></p>
+<h3 id="tracing-fixture-execution">tracing fixture execution</h3>
+<p>When two or more test functions use the same fixture, we can visually see how/when the fixture is called using <code>pytest --setup-show</code> flag.</p>
+<pre><code class="language-python">from pathlib import Path
+from tempfile import TemporaryDirectory
+import cards
+
+import pytest
+
+
+@pytest.fixture()
+def cards_db():
+    with TemporaryDirectory() as db_dir:
+        db_path = Path(db_dir)
+        db = cards.CardsDB(db_path)
+        yield db
+        db.close()
+
+
+def test_empty(cards_db):
+    assert cards_db.count() == 0
+
+
+
+def test_two(cards_db):
+    cards_db.add_card(cards.Card(&quot;first&quot;))
+    cards_db.add_card(cards.Card(&quot;second&quot;))
+    assert cards_db.count() == 2
+
+
+&gt;&gt;&gt;     SETUP    F cards_db
+        ch3/test_count.py::test_empty (fixtures used: cards_db).
+        TEARDOWN F cards_db
+        SETUP    F cards_db
+        ch3/test_count.py::test_two (fixtures used: cards_db).
+        TEARDOWN F cards_db
+</code></pre>
+<h3 id="finding-where-fixtures-are-defined">Finding where fixtures are defined</h3>
+<p>We can have conftest.py files at really every level of our test directory. Tests can use
+any fixture that is in the same test module as a test function, or in a conftest.py
+file in the same directory, or in any level of parent directory up to the root of
+the tests.</p>
+<pre><code class="language-python">pytest --fixtures # will bring all the locatin s of where fixtures are defined
+</code></pre>
+<pre><code class="language-python">pytest --fixtures-per-test &lt;folder name or testFile name&gt;
+# prints the fixturs used in test functions
+</code></pre>
+<h2 id="parameterization">Parameterization</h2>
+<p>There are three types aof parameterization</p>
+<ul>
+<li>
+<p>Parametrizing functions</p>
+</li>
+<li>
+<p>Parametrizing fixtures</p>
+</li>
+<li>
+<p>Using a hook function called pytest_generate_tests</p>
+</li>
+</ul>
+<h3 id="parameterizing-test-function">Parameterizing test function</h3>
+<p>Test function takes <code>pytest.mark.parametrize</code> decorator to achive this. This takes variable names nd list of parameter values. Variable names can be comma separated strings or list of strings. Values must be in a list (list of tuples).</p>
+<pre><code class="language-python"># test_func_param.py
+
+
+@pytest.mark.parametrize(
+&quot;start_summary, start_state&quot;,
+[
+(&quot;write a book&quot;, &quot;done&quot;),
+(&quot;second edition&quot;, &quot;in prog&quot;),
+(&quot;create a course&quot;, &quot;todo&quot;),
+],
+)
+def test_finish(cards_db, start_summary, start_state): 
+    ...
+
+
+</code></pre>
+<h3 id="selecting-one-test-when-parameterized">Selecting one test when parameterized</h3>
+<pre><code class="language-shell"> pytest -v &quot;test_func_param.py::test_finish[write a book-done]&quot;
+</code></pre>
+<h3 id="parameterizing-fixture">Parameterizing fixture</h3>
+<pre><code class="language-python">@pytest.fixture(params=[&quot;done&quot;, &quot;in prog&quot;, &quot;todo&quot;])
+def start_state(request):
+    return request.param
+
+def test_finish(cards_db, start_state): 
+    ...
+</code></pre>
+<h3 id="parameterize-using-hook-function-pytest_generate_test">Parameterize using hook function <code>pytest_generate_test</code></h3>
+<pre><code class="language-python">def pytest_generate_tests(metafunc):
+    if &quot;start_state&quot; in metafunc.fixturenames:
+        metafunc.parametrize(&quot;start_state&quot;, [&quot;done&quot;, &quot;in prog&quot;, &quot;todo&quot;]) 
+
+def test_finish(cards_db, start_state): 
+    ...
+
+</code></pre>
+<h3 id="how-to-manage-logging">How to manage logging:</h3>
+<p>Simply pass the name of the test file to be tested to pytest to test it.</p>
+<pre><code class="language-python">pytest test_one.py # tests all the test functions in this python file
+pytest test_card.py::test_defaults # tests only test_defaults funciton in this python file
+pytest &lt;folder name&gt; # tests all the test funcitons present in all the files in thsi folder
+</code></pre>
+<h3 id="a-basic-example">A basic example:</h3>
 <pre><code class="language-python">import logging
 
 def  test_apple():
@@ -727,7 +1177,6 @@ def  test_apple(caplog):
 2023-08-07 07:33:20 WARNING LEET warning message
 2023-08-07 07:33:20 ERROR LEET error message
 </code></pre>
-<h5 id="_1"></h5>
 <h5 id="print-logging-messages-in-a-log-file">Print logging messages in a log file:</h5>
 <p>Below configurations can be made in <code>pytest.ini</code> file to log logging messages in a file.</p>
 <p>No <code>caplog</code> fixture to be used.</p>
@@ -868,6 +1317,22 @@ where tycon 2&gt;NUL //2 captures the error from the terminal and directs it to 
     assert captured.out == &quot;hello\n&quot;
 </code></pre>
 <h6 id="the-readouterr-method-in-capsys-capsysbinary-capfd-capfdbinary-returns-outerr-which-is-a-tuple">The <code>readouterr()</code> method in <code>capsys, capsysbinary, capfd, capfdbinary</code> returns <code>(out,err)</code> which is a tuple.</h6>
+<h2 id="configuration-files-in-pytest">Configuration files in pytest</h2>
+<p>Below files can be used as configuration files for a pytest project.</p>
+<ul>
+<li>
+<p>pytest.ini</p>
+</li>
+<li>
+<p>tox.ini</p>
+</li>
+<li>
+<p>pyproject.toml</p>
+</li>
+<li>
+<p>setup.cfg</p>
+</li>
+</ul>
 
 
 
@@ -917,7 +1382,7 @@ where tycon 2&gt;NUL //2 captures the error from the terminal and directs it to 
     <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
   </body>
