@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../pythonBuiltIns/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../string/">
+        <link rel="next" href="../Github_Workflow/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>SMTP in Python: - My Docs</title>
+        <title>Docker - My Docs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#smtp-in-python" class="md-skip">
+        <a href="#docker" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SMTP in Python:
+              Docker
             
           </span>
         </div>
@@ -208,10 +208,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Docker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -220,6 +240,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#list-downloaded-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      List downloaded images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-running-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      List running images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-running-and-stopped-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      List running and stopped images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-from-dockerhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download from dockerHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-image-in-the-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the image in the background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-image-in-interactive-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run image in interactive mode
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -548,30 +651,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SMTP in Python:
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../smtp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,44 +663,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#securely-send-mail-using-smtp_ssl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securely send mail using SMTP_SSL:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#securely-send-mail-using-starttls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securely send mail using starttls():
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -689,18 +734,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#securely-send-mail-using-smtp_ssl" class="md-nav__link">
+  <a href="#list-downloaded-images" class="md-nav__link">
     <span class="md-ellipsis">
-      Securely send mail using SMTP_SSL:
+      List downloaded images
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#securely-send-mail-using-starttls" class="md-nav__link">
+  <a href="#list-running-images" class="md-nav__link">
     <span class="md-ellipsis">
-      Securely send mail using starttls():
+      List running images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-running-and-stopped-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      List running and stopped images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-from-dockerhub" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download from dockerHub
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-image-in-the-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the image in the background
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-image-in-interactive-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run image in interactive mode
     </span>
   </a>
   
@@ -721,29 +811,30 @@
                   
 
 
-<h1 id="smtp-in-python">SMTP in Python:</h1>
-<h3 id="securely-send-mail-using-smtp_ssl">Securely send mail using <code>SMTP_SSL</code>:</h3>
-<p>Its a best practice to store the password in the environment variables. When you create a new environment variable on Windows, it's important to note that changes to environment variables usually require restarting any applications or shells that were open before the variable was added.</p>
-<pre><code class="language-python">import smtplib, ssl
-
-port = 465  # For SSL
-password = &lt;password&gt;
-
-# Create a secure SSL context
-context = ssl.create_default_context()
-
-with smtplib.SMTP_SSL(&quot;smtp.gmail.com&quot;, port, context=context) as server:
-    server.login(&quot;my@gmail.com&quot;, password)
-    # TODO: Send email here
+<h1 id="docker">Docker</h1>
+<h2 id="list-downloaded-images">List downloaded images</h2>
+<pre><code class="language-shell">docker images
 </code></pre>
-<h3 id="securely-send-mail-using-starttls">Securely send mail using <code>starttls()</code>:</h3>
-<pre><code class="language-python">with SMTP('smtp.gmail.com', 587) as smtp:
-    smtp.starttls()
-    smtp.login(email_Address, os.environ.get(&quot;GMAIL_APP_PSWD&quot;))
-    smtp.sendmail(email_Address, email_Address, message.encode('utf-8'))
+<h2 id="list-running-images">List running images</h2>
+<pre><code class="language-shell">docker ps
 </code></pre>
-<p><code>smtp.gmail.com</code> is the smtp server of GMail.</p>
-<p><code>smtp.office365.com</code> is the smtp server of Outlook Mail.</p>
+<h2 id="list-running-and-stopped-images">List running and stopped images</h2>
+<pre><code class="language-shell">docker ps --all 
+OR
+docker ps -a
+</code></pre>
+<h2 id="download-from-dockerhub">Download from dockerHub</h2>
+<pre><code class="language-shell">docker pull &lt;imageName&gt;:&lt;TagName&gt;
+</code></pre>
+<h2 id="run-image">Run image</h2>
+<pre><code class="language-shell">docker run &lt;imageName&gt;:&lt;TagName&gt;
+</code></pre>
+<h2 id="run-the-image-in-the-background">Run the image in the background</h2>
+<pre><code class="language-shell">docker run -d redis:7.2-bookworm
+</code></pre>
+<h2 id="run-image-in-interactive-mode">Run image in interactive mode</h2>
+<pre><code class="language-shell">docker run -it &lt;imagename&gt;:&lt;tagname&gt;
+</code></pre>
 
 
 
