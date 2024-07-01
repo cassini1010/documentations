@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../pythonBuiltIns/">
+        <link rel="prev" href="../PythonTricks/">
       
       
-        <link rel="next" href="../string/">
+        <link rel="next" href="../SocketsinPython/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>SMTP in Python: - My Docs</title>
+        <title>Python best practices - My Docs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#smtp-in-python" class="md-skip">
+        <a href="#python-best-practices" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SMTP in Python:
+              Python best practices
             
           </span>
         </div>
@@ -348,10 +348,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Python_best_practices/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Python best practices
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -360,6 +380,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-a-generator-with-a-context-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrap a generator with a context manager
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -548,30 +597,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SMTP in Python:
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../smtp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,44 +609,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#securely-send-mail-using-smtp_ssl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securely send mail using SMTP_SSL:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#securely-send-mail-using-starttls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securely send mail using starttls():
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -689,18 +680,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#securely-send-mail-using-smtp_ssl" class="md-nav__link">
+  <a href="#wrap-a-generator-with-a-context-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Securely send mail using SMTP_SSL:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#securely-send-mail-using-starttls" class="md-nav__link">
-    <span class="md-ellipsis">
-      Securely send mail using starttls():
+      Wrap a generator with a context manager
     </span>
   </a>
   
@@ -721,29 +703,32 @@
                   
 
 
-<h1 id="smtp-in-python">SMTP in Python:</h1>
-<h3 id="securely-send-mail-using-smtp_ssl">Securely send mail using <code>SMTP_SSL</code>:</h3>
-<p>Its a best practice to store the password in the environment variables. When you create a new environment variable on Windows, it's important to note that changes to environment variables usually require restarting any applications or shells that were open before the variable was added.</p>
-<pre><code class="language-python">import smtplib, ssl
+<h1 id="python-best-practices">Python best practices</h1>
+<h2 id="wrap-a-generator-with-a-context-manager">Wrap a generator with a context manager</h2>
+<p>Wrapping a generator with a context manager helps cleanup the task when the context manager is exited. To convert a generator function into a context manager use <code>contextmanager</code> from <code>contextlib</code>.</p>
+<pre><code class="language-python">from contextlib import contextmanager
 
-port = 465  # For SSL
-password = &lt;password&gt;
+@contextmanager
+def file_reader(filename):
+    try:
+        # Open the file
+        f = open(filename, 'r')
+        yield f  # Yield the file object to the caller
+    finally:
+        # Cleanup: Close the file
+        f.close()
 
-# Create a secure SSL context
-context = ssl.create_default_context()
-
-with smtplib.SMTP_SSL(&quot;smtp.gmail.com&quot;, port, context=context) as server:
-    server.login(&quot;my@gmail.com&quot;, password)
-    # TODO: Send email here
+# Example usage
+with file_reader('example.txt') as f:
+    for line in f:
+        print(line.strip())
 </code></pre>
-<h3 id="securely-send-mail-using-starttls">Securely send mail using <code>starttls()</code>:</h3>
-<pre><code class="language-python">with SMTP('smtp.gmail.com', 587) as smtp:
-    smtp.starttls()
-    smtp.login(email_Address, os.environ.get(&quot;GMAIL_APP_PSWD&quot;))
-    smtp.sendmail(email_Address, email_Address, message.encode('utf-8'))
+<p>Receive input arguments from the console, split them using space as the delimiter, and convert each element to an integer in a single line.</p>
+<blockquote>
+<p>The <code>input()</code> function treats all characters as <code>str</code> by default.</p>
+</blockquote>
+<pre><code class="language-python">arr = map(int, input().split())
 </code></pre>
-<p><code>smtp.gmail.com</code> is the smtp server of GMail.</p>
-<p><code>smtp.office365.com</code> is the smtp server of Outlook Mail.</p>
 
 
 
