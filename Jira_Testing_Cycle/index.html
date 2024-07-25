@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../PythonTricks/">
+        <link rel="prev" href="../GoogleITCourse/">
       
       
-        <link rel="next" href="../SocketsinPython/">
+        <link rel="next" href="../MachineLearning/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Python best practices - Doc-Study</title>
+        <title>Jira Testing Cycle - Doc-Study</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-best-practices" class="md-skip">
+        <a href="#jira-testing-cycle" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python best practices
+              Jira Testing Cycle
             
           </span>
         </div>
@@ -308,10 +308,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Jira_Testing_Cycle/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Jira Testing Cycle
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -320,6 +340,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planning-and-creating-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planning and creating test cases.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organize-the-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organize the test cases.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report bug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -388,30 +482,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Python best practices
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Python_best_practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,35 +494,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#wrap-a-generator-with-a-context-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Wrap a generator with a context manager
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -720,9 +765,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wrap-a-generator-with-a-context-manager" class="md-nav__link">
+  <a href="#planning-and-creating-test-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      Wrap a generator with a context manager
+      Planning and creating test cases.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organize-the-test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organize the test cases.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report bug
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retest
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test summary
     </span>
   </a>
   
@@ -743,32 +833,33 @@
                   
 
 
-<h1 id="python-best-practices">Python best practices</h1>
-<h2 id="wrap-a-generator-with-a-context-manager">Wrap a generator with a context manager</h2>
-<p>Wrapping a generator with a context manager helps cleanup the task when the context manager is exited. To convert a generator function into a context manager use <code>contextmanager</code> from <code>contextlib</code>.</p>
-<pre><code class="language-python">from contextlib import contextmanager
-
-@contextmanager
-def file_reader(filename):
-    try:
-        # Open the file
-        f = open(filename, 'r')
-        yield f  # Yield the file object to the caller
-    finally:
-        # Cleanup: Close the file
-        f.close()
-
-# Example usage
-with file_reader('example.txt') as f:
-    for line in f:
-        print(line.strip())
-</code></pre>
-<p>Receive input arguments from the console, split them using space as the delimiter, and convert each element to an integer in a single line.</p>
-<blockquote>
-<p>The <code>input()</code> function treats all characters as <code>str</code> by default.</p>
-</blockquote>
-<pre><code class="language-python">arr = map(int, input().split())
-</code></pre>
+<h1 id="jira-testing-cycle">Jira Testing Cycle</h1>
+<h2 id="planning-and-creating-test-cases">Planning and creating test cases.</h2>
+<ul>
+<li>
+<p>requirement gathering: gather based on user stories. </p>
+</li>
+<li>
+<p>test case design: Each test case should have clear steps, expected results, and any prerequisites. </p>
+</li>
+</ul>
+<h2 id="organize-the-test-cases">Organize the test cases.</h2>
+<ul>
+<li>
+<p>Test Plan: outlines the scope, objectives, resources, and schedule for the testing activities. </p>
+</li>
+<li>
+<p>Test Suites: Group related test cases into test suites for better organization and management. </p>
+</li>
+</ul>
+<h2 id="execution">Execution</h2>
+<p>Test Execution: execute manually or automatically. Note the results in each test step or test case. Attache required evidence. </p>
+<h2 id="report-bug">Report bug</h2>
+<p>Issues found during testing? Create a bug ticket to dev team. Link the relevant test case/user story/requirement to the bug ticket. </p>
+<h2 id="retest">Retest</h2>
+<p>After the bug is fixed, the test is redone to ensure its fixed. </p>
+<h2 id="test-summary">Test summary</h2>
+<p>At the end of the testing cycle, compile a test summary report that highlights the overall test execution status, key findings, and any remaining risks.</p>
 
 
 
