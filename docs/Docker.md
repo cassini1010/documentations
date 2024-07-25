@@ -26,19 +26,19 @@ docker ps -a
 docker pull <imageName>:<TagName>
 ```
 
-## Run image
+## Run container
 
 ```shell
 docker run <imageName>:<TagName>
 ```
 
-## Run the image in the background
+## Run the container in the background
 
 ```shell
 docker run -d redis:7.2-bookworm
 ```
 
-## Run image in interactive mode
+## Run container in interactive mode
 
 ```shell
 docker run -it <imagename>:<tagname>

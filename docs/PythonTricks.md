@@ -115,7 +115,7 @@ This moduel provides the `import_module` function, which allows you to programma
 
 ## for-if-else operation:
 
-##### <mark>`list comprehension` and `generators` can be used interchnagably. While generators are more memory efficient list comprehensions are not.</mark>
+##### `list comprehension` and `generators` can be used interchnagably. While generators are more memory efficient list comprehensions are not.
 
 ```python
 # using for and if list comprehension and generator
@@ -135,7 +135,7 @@ if_else = True if 3<5 else False
 
 ## type(self)._\_name_\_:
 
-`print(tyep(self).__name__)`  is used to print the name of the class to which the instance `self` belongs to.
+`print(type(self).__name__)`  is used to print the name of the class to which the instance `self` belongs to.
 
 ## Single and double underscore in variable and method/funciton names:
 

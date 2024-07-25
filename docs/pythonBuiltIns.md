@@ -89,7 +89,7 @@ class ParseINI:
 
 ## compile()
 
-used to compile a source code string into a executable code.
+Used to compile a source code string into an executable code.
 
 ```python
 source = '''import osprint(os.__dir__())'''
@@ -148,7 +148,7 @@ def even(n):
 print(list(filter(even, l)))
 ```
 
-## locals() and globals() funciton in python
+## locals() and globals() function in python
 
 `locals()` is a built-in function in python that is used to obtain the dictionary of current local symbol table.
 
@@ -206,7 +206,9 @@ for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):
 
 `zip()` stops when the shortest iterable is exhausted.
 
-Below exmple shows how to zip and unzip.
+
+
+## zip and unzip
 
 ```python
 x = [1,2,3,4,5]
