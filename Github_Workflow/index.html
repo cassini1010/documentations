@@ -211,11 +211,71 @@
   
   
     <li class="md-nav__item">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Based Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
   </span>
   
 
@@ -438,6 +498,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PythonTricks/" class="md-nav__link">
         
   
@@ -483,6 +563,26 @@
   
   <span class="md-ellipsis">
     Sockets in Python:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timing your python code
   </span>
   
 
@@ -813,7 +913,7 @@
     name: output-log-file
     path: output.log
 </code></pre>
-<p>Download of this report or log file can be done from the artifact using below worflow. The download is often done using a separate workflow. If the download is supposed to be done in the same workflow file, use the <code>needs: &lt;upload job name&gt;</code> in the below wrokflow to specify that upload job has to run before hte download job.</p>
+<p>Download of this report or log file can be done from the artifact using below workflow. The download is often done using a separate workflow. If the download is supposed to be done in the same workflow file, use the <code>needs: &lt;upload job name&gt;</code> in the below workflow to specify that upload job has to run before hte download job.</p>
 <pre><code class="language-yaml">steps:
 - name: Download a single artifact
   uses: actions/download-artifact@v4

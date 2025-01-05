@@ -211,11 +211,71 @@
   
   
     <li class="md-nav__item">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Based Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
   </span>
   
 
@@ -420,6 +480,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PythonTricks/" class="md-nav__link">
         
   
@@ -465,6 +545,26 @@
   
   <span class="md-ellipsis">
     Sockets in Python:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timing your python code
   </span>
   
 
@@ -747,7 +847,7 @@
 <h2 id="check-the-health-of-ram">Check the health of RAM</h2>
 <p><code>memtest 86</code> tool is run in boot instead of normal operating system.</p>
 <p>System crash log files are located in <code>/var/log</code> in linux and for windows we can look at the <code>Event Viewer</code> tool.</p>
-<p><code>strace</code> (system trace) can also be used in linux to find out which system call is made dering the crash to identify the root cause. </p>
+<p><code>strace</code> (system trace) can also be used in linux to find out which system call is made during the crash to identify the root cause. </p>
 <h1 id="configuration-management-cloud">Configuration management Cloud</h1>
 <p>Configuration management is an Automation technique which let manage computers at a large scale.</p>
 <p><code>puppet</code> is current industry standard for config-management.</p>
@@ -800,9 +900,22 @@ renice -&gt; modify the priority of a running process
 <pre><code class="language-shell">pidof jellyfin # prints the PID of the running process named jellyfin
 
 
-ps ax | less # shows all the runnig process on computer
-# less is used to scroll through the commmand line output
+ps ax | less # shows all the running process on computer
+# less is used to scroll through the command line output
 </code></pre>
+<h2 id="using-python-to-interact-with-os">Using python to interact with OS</h2>
+<p>Use <code>perato principle</code> determine which task to automate</p>
+<h3 id="some-of-the-useful-system-adm-function-in-python">Some of the useful system adm function in python</h3>
+<ul>
+<li>
+<p>shutil.disk_usage</p>
+</li>
+<li>
+<p><code>psutil</code> Module</p>
+</li>
+</ul>
+<h2 id="configuration-management-and-the-cloud">Configuration management and the Cloud</h2>
+<p>In this course we learn <code>puppet</code> which is current industry standard for configuration management.</p>
 
 
 

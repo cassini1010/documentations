@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Numpy/">
+        <link rel="prev" href="../PyTorch/">
       
       
         <link rel="next" href="../Python_best_practices/">
@@ -211,11 +211,71 @@
   
   
     <li class="md-nav__item">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Based Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
   </span>
   
 
@@ -368,6 +428,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -492,6 +572,26 @@
   
   <span class="md-ellipsis">
     Sockets in Python:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timing your python code
   </span>
   
 
@@ -830,7 +930,7 @@ print(f)
 
 &gt;&gt;[1,2,3,4,5,6]
 </code></pre>
-<p>Unpacking in a function allows us to provide variable number of arguments to the funciton.</p>
+<p>Unpacking in a function allows us to provide variable number of arguments to the function.</p>
 <pre><code class="language-python"># Unpacking in function arguments
 def print_values(*args):
     for value in args:
@@ -845,7 +945,7 @@ print_values(1, 2, 3, 4, 5)
 # 5 
 </code></pre>
 <h2 id="pop-method-on-lists">pop() method on lists:</h2>
-<p><code>pop()</code> is used to pop all elemets out of the list. Once the elemets are poped out the list becomes empty. Printing the list now will print an empty list.</p>
+<p><code>pop()</code> is used to pop all elements out of the list. Once the elements are popped out the list becomes empty. Printing the list now will print an empty list.</p>
 <pre><code class="language-python">a = [1,2,3,4,5,6,7]
 
 while a:
@@ -881,15 +981,15 @@ while a: print(a.pop(-1), end='', flush=True); print(&quot; hello&quot;)
 <pre><code class="language-python">print(&quot;Pass&quot;) if marks &gt;= 45 else print(&quot;Fail&quot;)
 </code></pre>
 <h2 id="importlib-standard-library"><code>importlib</code> standard library:</h2>
-<p>This moduel provides the <code>import_module</code> function, which allows you to programmatically import a module.</p>
+<p>This module provides the <code>import_module</code> function, which allows you to programmatically import a module.</p>
 <h2 id="for-if-else-operation">for-if-else operation:</h2>
-<h5 id="list-comprehension-and-generators-can-be-used-interchnagably-while-generators-are-more-memory-efficient-list-comprehensions-are-not"><code>list comprehension</code> and <code>generators</code> can be used interchnagably. While generators are more memory efficient list comprehensions are not.</h5>
+<h5 id="list-comprehension-and-generators-can-be-used-interchangeably-while-generators-are-more-memory-efficient-list-comprehensions-are-not"><code>list comprehension</code> and <code>generators</code> can be used interchangeably. While generators are more memory efficient list comprehensions are not.</h5>
 <pre><code class="language-python"># using for and if list comprehension and generator
 for_if = [i for i in range(1,10) if i&lt;6]
 &gt;&gt; [1, 2, 3, 4, 5]
 
 
-# using for, if and else in list comprihension and generators
+# using for, if and else in list comprehension and generators
 for_if_else = [5 if i&lt;5 else 10 for i in range(1,20)]
 &gt;&gt;[5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
 
@@ -900,7 +1000,7 @@ if_else = True if 3&lt;5 else False
 </code></pre>
 <h2 id="typeself_name_">type(self).<em>_name</em>_:</h2>
 <p><code>print(type(self).__name__)</code>  is used to print the name of the class to which the instance <code>self</code> belongs to.</p>
-<h2 id="single-and-double-underscore-in-variable-and-methodfunciton-names">Single and double underscore in variable and method/funciton names:</h2>
+<h2 id="single-and-double-underscore-in-variable-and-methodfunction-names">Single and double underscore in variable and method/function names:</h2>
 <p>Leading or trailing single underscore and double underscore has a significance in python. </p>
 <table>
 <thead>
@@ -1014,7 +1114,7 @@ sys.set_int_max_str_digits() # used to set it to a desired value
 <h2 id="queues">Queues</h2>
 <p>FIFO</p>
 <p>Adding element to Queue is called <code>enqueue</code> </p>
-<p>Retriving element from Queue is called <code>dequeue</code></p>
+<p>Retrieving element from Queue is called <code>dequeue</code></p>
 <h2 id="stack">Stack</h2>
 <p>LIFO</p>
 <h2 id="dequedouble-ended-queue">Deque(Double ended queue)</h2>

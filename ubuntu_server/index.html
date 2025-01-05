@@ -209,11 +209,71 @@
   
   
     <li class="md-nav__item">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Based Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
   </span>
   
 
@@ -369,6 +429,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PythonTricks/" class="md-nav__link">
         
   
@@ -414,6 +494,26 @@
   
   <span class="md-ellipsis">
     Sockets in Python:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timing your python code
   </span>
   
 
@@ -684,9 +784,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#to-get-rid-of-extering-password-to-login-to-remote-server" class="md-nav__link">
+  <a href="#to-get-rid-of-entering-password-to-login-to-remote-server" class="md-nav__link">
     <span class="md-ellipsis">
-      to get rid of extering password to login to remote-server
+      to get rid of entering password to login to remote-server
     </span>
   </a>
   
@@ -838,9 +938,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#to-get-rid-of-extering-password-to-login-to-remote-server" class="md-nav__link">
+  <a href="#to-get-rid-of-entering-password-to-login-to-remote-server" class="md-nav__link">
     <span class="md-ellipsis">
-      to get rid of extering password to login to remote-server
+      to get rid of entering password to login to remote-server
     </span>
   </a>
   
@@ -978,7 +1078,7 @@ sudo apt install openssh-client # for client
 <p>To <code>ssh</code> from a Debian WSL to an Ubuntu-Server first you need to have <code>openssh-client</code> in the WSL. Now type the below command to enter into your server.</p>
 <pre><code class="language-shell">ssh username@&lt;ip-add of server&gt;
 </code></pre>
-<h2 id="to-get-rid-of-extering-password-to-login-to-remote-server">to get rid of extering password to login to remote-server</h2>
+<h2 id="to-get-rid-of-entering-password-to-login-to-remote-server">to get rid of entering password to login to remote-server</h2>
 <p>Use SSH public key encryption to get rid of typing the password all the time when you login to your server. This requires you to generate ssh keypairs.</p>
 <p>To generate the SSH public and Private key</p>
 <pre><code class="language-shell">ssh-keygen -t rsa
@@ -986,7 +1086,7 @@ sudo apt install openssh-client # for client
 <p><code>rsa</code> is one algorithm among the list of algorithms <code>[dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]</code>. You can provide the <code>passphrase</code> if you wish. The default storage location of the public/private key file is <code>C:\User\\&lt;user-name\.ssh</code>.</p>
 <p>Copy the content of  <code>id_rsa.pub</code> file to a file called <code>authorized_keys</code> in <code>~/.ssh</code> folder in linux server.</p>
 <h2 id="scp">scp</h2>
-<p><code>scp</code> is a file copy/file transfer protocol unlike ftp. It is most secure way of trasfering files between the remote systems.</p>
+<p><code>scp</code> is a file copy/file transfer protocol unlike ftp. It is most secure way of transferring files between the remote systems.</p>
 <pre><code class="language-shell">scp &quot;D:\girishree studio\KIS_9487.JPG&quot; jeevan@192.168.30.6:/home/jeevan/Movies
 </code></pre>
 <h2 id="users">users</h2>
@@ -1010,7 +1110,7 @@ sudo apt install openssh-client # for client
 <p>Start an X11 server in windows system Ex; Xming server</p>
 </li>
 <li>
-<p>Open PuTTY and enable the X11 configuratoin and login to server.</p>
+<p>Open PuTTY and enable the X11 configuration and login to server.</p>
 </li>
 <li>
 <p>Start a GUI application Ex; gedit</p>
@@ -1025,7 +1125,7 @@ gedit
 <h2 id="public-private-key-encryption">Public-Private key encryption</h2>
 <p>Public key encrypts the data. Private key decrypts the data.</p>
 <h3 id="how-public-private-key-cryptography-works">How Public-Private Key Cryptography Works</h3>
-<p>If A wants to send a message to B, A takes public key of B and encrypts the message with it and sends it to B. B uses the private key associated with his public key to decrypt the message. Since messgae is encrypted with B's Public key, it can only be decrypted by B's private key. So no middle man in between can decrypt the message and messgge is safe.</p>
+<p>If A wants to send a message to B, A takes public key of B and encrypts the message with it and sends it to B. B uses the private key associated with his public key to decrypt the message. Since message is encrypted with B's Public key, it can only be decrypted by B's private key. So no middle man in between can decrypt the message and message is safe.</p>
 <p>However, with this form of messaging there is no way to authenticate the source of the message. Anonymous person C can act like A to send message to B. Bjust thinks that the message came from A but actually its not.</p>
 <p>To overcome this problem below methods are followed:</p>
 <h3 id="digital-signature">Digital signature</h3>

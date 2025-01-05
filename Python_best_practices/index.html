@@ -211,11 +211,71 @@
   
   
     <li class="md-nav__item">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Based Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
   </span>
   
 
@@ -371,6 +431,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PythonTricks/" class="md-nav__link">
         
   
@@ -445,6 +525,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#from-none-in-raise" class="md-nav__link">
+    <span class="md-ellipsis">
+      from None in raise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list_iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      list_iterator
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -465,6 +563,26 @@
   
   <span class="md-ellipsis">
     Sockets in Python:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timing your python code
   </span>
   
 
@@ -728,6 +846,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#from-none-in-raise" class="md-nav__link">
+    <span class="md-ellipsis">
+      from None in raise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list_iterator" class="md-nav__link">
+    <span class="md-ellipsis">
+      list_iterator
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -768,6 +904,24 @@ with file_reader('example.txt') as f:
 <p>The <code>input()</code> function treats all characters as <code>str</code> by default.</p>
 </blockquote>
 <pre><code class="language-python">arr = map(int, input().split())
+</code></pre>
+<h2 id="from-none-in-raise"><code>from None</code> in <code>raise</code></h2>
+<pre><code class="language-python">def dequeue(self):
+        try:
+            return self._items.popleft()
+        except IndexError:
+            raise IndexError(&quot;dequeue from an empty queue&quot;) from None
+</code></pre>
+<p><code>from None</code> in the <code>raise</code> statement is used in the situations where the originally raised exception and exception raised by <code>raise</code> statement are of same exception class (Ex IndexError).</p>
+<p>when <code>IndexError</code> is already raised its is catches and another index error is raised. The first statement prints <code>dequeue from an empty q</code>  statement and another statement from the original Index error is also printed. To get rid of the original IndexError statement and print only the iser defined statement in the <code>raise</code> line, <code>from None</code> is used.</p>
+<blockquote>
+<p>Three basic built-in sequences in python are List, Tuples and Strings.</p>
+</blockquote>
+<h2 id="list_iterator">list_iterator</h2>
+<p>In the below code snippet <code>number_iterator</code> is a <code>list_iterator</code> and it is used to save memory by saving one element at a time in the memory.</p>
+<p>The <code>list_iterator</code> allows you to access the elements of a list (or any iterable) one at a time, rather than loading all elements into memory at once. This is useful when working with large datasets or when you only need to process elements sequentially, saving memory.</p>
+<pre><code class="language-python">numbers = [random.randint(1, 20) for _ in range(20)]
+numbers_iterator = iter(numbers)
 </code></pre>
 
 

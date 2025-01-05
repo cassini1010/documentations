@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Jira_Testing_Cycle/">
+        <link rel="prev" href="../SocketsinPython/">
       
       
-        <link rel="next" href="../Numpy/">
+        <link rel="next" href="../cmdTricks/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Machine Learning - Doc-Study</title>
+        <title>Timing your python code - Doc-Study</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#machine-learning" class="md-skip">
+        <a href="#timing-your-python-code" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Machine Learning
+              Timing your python code
             
           </span>
         </div>
@@ -388,30 +388,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Machine Learning
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../MachineLearning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,53 +400,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#standard-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Standard Workflow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculating-loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculating loss
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -575,10 +508,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Timing_your_python_code/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Timing your python code
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -587,6 +540,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#perf_counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      perf_counter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-class-using-perf-counter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timer class using perf-counter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeit-built-in-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      timeit built in function
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -838,27 +838,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#standard-workflow" class="md-nav__link">
+  <a href="#perf_counter" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Workflow
+      perf_counter
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#timer-class-using-perf-counter" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Timer class using perf-counter
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculating-loss" class="md-nav__link">
+  <a href="#timeit-built-in-function" class="md-nav__link">
     <span class="md-ellipsis">
-      Calculating loss
+      timeit built in function
     </span>
   </a>
   
@@ -879,103 +879,46 @@
                   
 
 
-<h1 id="machine-learning">Machine Learning</h1>
-<p>In Keras, the typical workflow involves creating a model, adding layers, compiling the model, training it with data, and then testing and using it. However, there are variations depending on the complexity of the model and the specific use case. Here’s a detailed explanation of the standard workflow and its applicability:</p>
-<h3 id="standard-workflow">Standard Workflow</h3>
-<ol>
-<li>
-<p><strong>Create a Model</strong>:</p>
-</li>
-<li>
-<p>Define the architecture of the neural network by creating a model. This can be done using the Sequential API for simple models or the Functional API for more complex architectures.</p>
-</li>
-<li>
-<p><strong>Add Layers</strong>:</p>
-</li>
-<li>
-<p>Add layers to the model to build the architecture. In the Sequential API, layers are added one after another. In the Functional API, layers can be added in a more flexible manner, allowing for shared layers, branching, and other complex structures.</p>
-</li>
-<li>
-<p><strong>Compile the Model</strong>:</p>
-</li>
-<li>
-<p>Specify the optimizer, loss function, and metrics to monitor during training. This step configures the learning process.</p>
-</li>
-<li>
-<p><strong>Train the Model</strong>:</p>
-</li>
-<li>
-<p>Fit the model to the training data using the <code>fit</code> method. This involves feeding the model with data and adjusting weights based on the loss function.</p>
-</li>
-<li>
-<p><strong>Evaluate the Model</strong>:</p>
-</li>
-<li>
-<p>Assess the model’s performance on a test set using the <code>evaluate</code> method. This step helps in understanding how well the model generalizes to new data.</p>
-</li>
-<li>
-<p><strong>Make Predictions</strong>:</p>
-</li>
-<li>
-<p>Use the trained model to make predictions on new data using the <code>predict</code> method.</p>
-</li>
-</ol>
-<h2 id="example">Example</h2>
-<pre><code class="language-python">import numpy as np
-import math
-import tensorflow as tf
-from keras import Sequential, layers
-import matplotlib.pyplot as plt
+<h1 id="timing-your-python-code">Timing your python code</h1>
+<h2 id="perf_counter">perf_counter</h2>
+<p>This is one of the best ways to calculate time taken by the code. </p>
+<blockquote>
+<p>Note: Best time of the code can be calculated by selecting the lowest time of all the tries. Average of all the tries is not an efficient way, because of computer running other process in the background. The recorded lowest time is when the other processes has less influence.</p>
+</blockquote>
+<h2 id="timer-class-using-perf-counter">Timer class using <code>perf-counter</code></h2>
+<pre><code class="language-python"># timer.py
 
-rng = np.random.default_rng()
+import time
 
-x_value = rng.uniform(low=0, high=(2*math.pi), size=10000)
-y_value = np.sin(x_value) + (0.1 *rng.random(size=10000))
-x_validation, x_test, x_training = x_value[0:2000], x_value[2000:4000], x_value[:]
-y_validation, y_test, y_training = y_value[0:2000], y_value[2000:4000], y_value[:]
+class TimerError(Exception):
+    &quot;&quot;&quot;A custom exception used to report errors in use of Timer class&quot;&quot;&quot;
 
-# plt.plot(x_validation, y_validation, 'r.', label = &quot;Validation&quot;)
-plt.plot(x_test, y_test, 'g.', label = &quot;test&quot;)
-# plt.plot(x_training, y_training, 'b.', label = &quot;training&quot;)
-plt.legend()
+class Timer:
+    def __init__(self):
+        self._start_time = None
 
+    def start(self):
+        &quot;&quot;&quot;Start a new timer&quot;&quot;&quot;
+        if self._start_time is not None:
+            raise TimerError(f&quot;Timer is running. Use .stop() to stop it&quot;)
 
-# Create Model
-model = Sequential()
+        self._start_time = time.perf_counter()
 
-# Add layers to the model
-model.add(layers.Dense(16, activation='relu', input_shape=(1,)))
-model.add(layers.Dense(16, activation='relu'))
-model.add(layers.Dense(1))
+    def stop(self):
+        &quot;&quot;&quot;Stop the timer, and report the elapsed time&quot;&quot;&quot;
+        if self._start_time is None:
+            raise TimerError(f&quot;Timer is not running. Use .start() to start it&quot;)
 
-# Look at the summary of the model (optional)
-model.summary()
-
-# Compile model with right optimizer, loss function and metrics to model
-model.compile(optimizer='rmsprop', loss='mae', metrics=['mae'])
-
-# Train the model
-trained_model = model.fit(x_training, y_training, epochs=500,
-                           batch_size=100)
-
-
-# Evaluate the trained model with test data
-loss_val, metric_val = model.evaluate(x_validation, y_validation)
-
-# Use the model to predict using the unknown data
-predicted_y = model.predict(x_test)
-plt.plot(x_test, predicted_y, 'r.')
-
-
-plt.show()
-
-# save the model in to a .h5 file
-model.save('sine.h5')
+        elapsed_time = time.perf_counter() - self._start_time
+        self._start_time = None
+        print(f&quot;Elapsed time: {elapsed_time:0.4f} seconds&quot;)
 </code></pre>
-<h2 id="calculating-loss">Calculating loss</h2>
-<p><img alt="" src="C:\Users\jeeva\AppData\Roaming\marktext\images\2024-06-21-08-35-44-image.png" /></p>
-<p>Loss is measured using the simple technique where we square the distance between the predicted and actual value, add them up, then get the square root of the added result. </p>
-<p>Squaring up the distances makes sure that the negative and positive distances don't cancel up with each other.</p>
+<h2 id="timeit-built-in-function">timeit built in function</h2>
+<p><code>timeit</code> is a builtin function used to time your code</p>
+<p><code>cProfile</code> can be used to identify which function  is taking longer time. </p>
+<p><code>line_profiler</code> can be used to identify which line is taking long time to run.</p>
+<p><code>memory-profile</code> can be used to profile the memory consumption.</p>
+<p>Suggested way if to first use <code>cProfile</code> to profile the functions and then use <code>line_profiler</code> to profile the lines of that function .</p>
 
 
 

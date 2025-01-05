@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Jira_Testing_Cycle/">
+        <link rel="prev" href="../Certificate_Based_Authentication/">
       
       
-        <link rel="next" href="../Numpy/">
+        <link rel="next" href="../Docker/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Machine Learning - Doc-Study</title>
+        <title>Data Structures - Doc-Study</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#machine-learning" class="md-skip">
+        <a href="#data-structures" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Machine Learning
+              Data Structures
             
           </span>
         </div>
@@ -228,10 +228,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Data_Structurs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -240,6 +260,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collectionsdeque-pronounced-deck" class="md-nav__link">
+    <span class="md-ellipsis">
+      collections.deque (pronounced deck)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list-without-using-deque-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked list without using deque library:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -388,30 +455,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Machine Learning
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../MachineLearning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,53 +467,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#standard-workflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Standard Workflow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#calculating-loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      Calculating loss
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -838,27 +838,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#standard-workflow" class="md-nav__link">
+  <a href="#linked-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Standard Workflow
+      Linked List
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#collectionsdeque-pronounced-deck" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      collections.deque (pronounced deck)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculating-loss" class="md-nav__link">
+  <a href="#linked-list-without-using-deque-library" class="md-nav__link">
     <span class="md-ellipsis">
-      Calculating loss
+      Linked list without using deque library:
     </span>
   </a>
   
@@ -879,103 +879,146 @@
                   
 
 
-<h1 id="machine-learning">Machine Learning</h1>
-<p>In Keras, the typical workflow involves creating a model, adding layers, compiling the model, training it with data, and then testing and using it. However, there are variations depending on the complexity of the model and the specific use case. Here’s a detailed explanation of the standard workflow and its applicability:</p>
-<h3 id="standard-workflow">Standard Workflow</h3>
-<ol>
-<li>
-<p><strong>Create a Model</strong>:</p>
-</li>
-<li>
-<p>Define the architecture of the neural network by creating a model. This can be done using the Sequential API for simple models or the Functional API for more complex architectures.</p>
-</li>
-<li>
-<p><strong>Add Layers</strong>:</p>
-</li>
-<li>
-<p>Add layers to the model to build the architecture. In the Sequential API, layers are added one after another. In the Functional API, layers can be added in a more flexible manner, allowing for shared layers, branching, and other complex structures.</p>
-</li>
-<li>
-<p><strong>Compile the Model</strong>:</p>
-</li>
-<li>
-<p>Specify the optimizer, loss function, and metrics to monitor during training. This step configures the learning process.</p>
-</li>
-<li>
-<p><strong>Train the Model</strong>:</p>
-</li>
-<li>
-<p>Fit the model to the training data using the <code>fit</code> method. This involves feeding the model with data and adjusting weights based on the loss function.</p>
-</li>
-<li>
-<p><strong>Evaluate the Model</strong>:</p>
-</li>
-<li>
-<p>Assess the model’s performance on a test set using the <code>evaluate</code> method. This step helps in understanding how well the model generalizes to new data.</p>
-</li>
-<li>
-<p><strong>Make Predictions</strong>:</p>
-</li>
-<li>
-<p>Use the trained model to make predictions on new data using the <code>predict</code> method.</p>
-</li>
-</ol>
-<h2 id="example">Example</h2>
-<pre><code class="language-python">import numpy as np
-import math
-import tensorflow as tf
-from keras import Sequential, layers
-import matplotlib.pyplot as plt
-
-rng = np.random.default_rng()
-
-x_value = rng.uniform(low=0, high=(2*math.pi), size=10000)
-y_value = np.sin(x_value) + (0.1 *rng.random(size=10000))
-x_validation, x_test, x_training = x_value[0:2000], x_value[2000:4000], x_value[:]
-y_validation, y_test, y_training = y_value[0:2000], y_value[2000:4000], y_value[:]
-
-# plt.plot(x_validation, y_validation, 'r.', label = &quot;Validation&quot;)
-plt.plot(x_test, y_test, 'g.', label = &quot;test&quot;)
-# plt.plot(x_training, y_training, 'b.', label = &quot;training&quot;)
-plt.legend()
+<h1 id="data-structures">Data Structures</h1>
+<h2 id="linked-list">Linked List</h2>
+<p>Since adding and deleting of the element at the beginning and end of a list is efficient using <code>linked lists</code> , these are used to construct <code>Queues</code></p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Time Complexity of List</th>
+<th>Time Complexity of Linked List</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add/remove element to the beginning</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td></td>
+</tr>
+<tr>
+<td>add/remove element at the end</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td></td>
+</tr>
+<tr>
+<td>Retrieve element</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>List uses indexes which is faster. Linked list uses traversing.</td>
+</tr>
+<tr>
+<td>Search for specific element</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>Both uses traversing to search element</td>
+</tr>
+</tbody>
+</table>
+<p><code>List</code> uses contiguous memory allotment. To append to the left/head of the list it takes O(n) computations, as a new empty memory block has to be created at the beginning of the list. This operation requires existing elements to shift one position to the right resulting in <code>n</code> operations. Similarly, removing an element form the left also requires each remaining elements to be shifted to the left, resulting in <code>n-1</code> operations and hence O(n) time complexity.</p>
+<p>On the other hand append and pop form the right doesn't need shifting of <code>n</code> elements from the  list. hence O(1) time complexity.</p>
+<h2 id="collectionsdeque-pronounced-deck">collections.deque (pronounced <code>deck</code>)</h2>
+<p>This is the <code>linked list</code> implementation in python. Takes <code>O(1)</code> time complexity. Easy to insert, remove, access element from both ends of a list.</p>
+<p>Recommended to be used for the implementation of <code>queues</code> and <code>stacks</code></p>
+<p>If thread operations are used on  <code>queues</code> and <code>stacks</code> , it is recommended to use <code>Queues</code> library in python. But <code>deques</code> can also be used with some trade offs. </p>
+<p><mark><code>deques</code> have a feature to restrict the maximum length of your deques.</mark></p>
+<h2 id="linked-list-without-using-deque-library">Linked list without using <code>deque</code> library:</h2>
+<p><code>SinglyLinkedList</code> has <code>head</code> as a parameter. The efficiency can be increased a little by adding a <code>tail</code> parameter. Although <code>tail</code> parameter do not help in pop() method, it at least helps in other operations.</p>
+<pre><code class="language-python">SinglyLinkedList.py
 
 
-# Create Model
-model = Sequential()
+class EmptyLinkedList(Exception):
+    ...
 
-# Add layers to the model
-model.add(layers.Dense(16, activation='relu', input_shape=(1,)))
-model.add(layers.Dense(16, activation='relu'))
-model.add(layers.Dense(1))
+class Node:
+    def __init__(self, data:str) -&gt; None:
+        self.data = str(data)
+        self.next = None
 
-# Look at the summary of the model (optional)
-model.summary()
+class SingleLinkedList:
+    def __init__(self) -&gt; None:
+        self.head = None
+        self.tail = None
 
-# Compile model with right optimizer, loss function and metrics to model
-model.compile(optimizer='rmsprop', loss='mae', metrics=['mae'])
+    def __repr__(self) -&gt; str:
+        head = self.head
+        sll_repr = []
+        while head:
+            sll_repr.append(head.data)
+            head = head.next
+        return &quot;-&gt;&quot;.join(sll_repr)
 
-# Train the model
-trained_model = model.fit(x_training, y_training, epochs=500,
-                           batch_size=100)
+    def append(self, data):
+        '''- This method doesn't use the tail parameter
+           - Uses traversal to get to the point where append
+             needs to be done.
+           - Traversal takes time for larger list O(n)'''
+        head = self.head
+        if head == None:
+            head = Node(data)
+            self.head = head
+            return None
+        while head.next:
+            head = head.next
+        head.next = Node(data)
 
+    def pop(self):
+        '''- This method doesn't use the tail parameter
+           - Uses traversal to get to the point where remove
+             needs to be done.
+           - Traversal takes time for larger list O(n)'''
+        head = self.head
+        if head == None:
+            raise EmptyLinkedList(&quot;Operating on empty linked list&quot;)
+        elif head.next == None:
+            self.head = None
+            return None
+        while head.next.next:
+            head = head.next
+        head.next = None
 
-# Evaluate the trained model with test data
-loss_val, metric_val = model.evaluate(x_validation, y_validation)
+    def tail_pop(self):
+        '''pop using tail parameter is not possible in singly linked list
+            Because tail is pointing to last element which is supposed to be removed
+            pointing it to the one element previous to tail needs another pointer
+        '''
 
-# Use the model to predict using the unknown data
-predicted_y = model.predict(x_test)
-plt.plot(x_test, predicted_y, 'r.')
+    def append_left(self, data):
+        '''append_left also takes O(1) as head pointer is always pointing to 
+        the beginning of the list'''
+        head = self.head
+        new_node = Node(data)
+        new_node.next = head
+        self.head = new_node
 
+    def pop_left(self):
+        '''pop left takes O(1) as head pointer is already there'''
+        try:
+            self.head = self.head.next
+        except AttributeError:
+            raise EmptyLinkedList(&quot;Operating on empty linked list&quot;) from None
 
-plt.show()
-
-# save the model in to a .h5 file
-model.save('sine.h5')
+    def tail_append(self, data):
+        '''- Tail append uses tail parameter
+           - appending to the tail takes O(1) time complexity
+        '''
+        head = self.head
+        tail = self.tail
+        if head == None:
+            head = Node(data)
+            self.head, self.tail = head, head
+            return None
+        if tail == head:
+            tail = Node(data)
+            self.head.next = tail
+            self.tail = tail
+            return None
+        tail.next = Node(data)
+        self.tail = tail.next
 </code></pre>
-<h2 id="calculating-loss">Calculating loss</h2>
-<p><img alt="" src="C:\Users\jeeva\AppData\Roaming\marktext\images\2024-06-21-08-35-44-image.png" /></p>
-<p>Loss is measured using the simple technique where we square the distance between the predicted and actual value, add them up, then get the square root of the added result. </p>
-<p>Squaring up the distances makes sure that the negative and positive distances don't cancel up with each other.</p>
 
 
 

@@ -211,11 +211,71 @@
   
   
     <li class="md-nav__item">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Based Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
   </span>
   
 
@@ -371,6 +431,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PythonTricks/" class="md-nav__link">
         
   
@@ -416,6 +496,26 @@
   
   <span class="md-ellipsis">
     Sockets in Python:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timing your python code
   </span>
   
 
@@ -680,13 +780,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#map-and-fileter" class="md-nav__link">
+  <a href="#map-and-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      map() and fileter()
+      map() and filter()
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="map() and fileter()">
+    <nav class="md-nav" aria-label="map() and filter()">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1120,6 +1220,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#len" class="md-nav__link">
+    <span class="md-ellipsis">
+      len()
+    </span>
+  </a>
   
 </li>
       
@@ -1281,13 +1390,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#map-and-fileter" class="md-nav__link">
+  <a href="#map-and-filter" class="md-nav__link">
     <span class="md-ellipsis">
-      map() and fileter()
+      map() and filter()
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="map() and fileter()">
+    <nav class="md-nav" aria-label="map() and filter()">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1724,6 +1833,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#len" class="md-nav__link">
+    <span class="md-ellipsis">
+      len()
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1757,7 +1875,7 @@ print(abs(b))
 <pre><code class="language-python">lst = [1,3,5,7,9,0]
 print(all(lst)) # False
 lst = [0,0,0,0,0]
-print(any(lst)) # Flase
+print(any(lst)) # False
 </code></pre>
 <h2 id="breakpoint">breakpoint()</h2>
 <p>the <code>breakpoint()</code> function is used for debugging purposes. It calls the built-in debugger (usually the Python debugger, <code>pdb</code>) to allow you to interactively debug your code.</p>
@@ -1810,7 +1928,7 @@ boy()
 executable = compile(source, '&lt;string&gt;', 'exec')
 exec(executable)
 </code></pre>
-<p>Real world usage of this is in Scripting engins, making a custom Domain-specific language, Runtime code Evaluation, Code generator tools, code evaluation tools.</p>
+<p>Real world usage of this is in Scripting engines, making a custom Domain-specific language, Runtime code Evaluation, Code generator tools, code evaluation tools.</p>
 <h2 id="enumerateiterable">enumerate(iterable)</h2>
 <pre><code class="language-python">l = [1,5,9,5,2,0,12,56,78,34]
 
@@ -1830,7 +1948,7 @@ output:
 9 : 9
 ...
 </code></pre>
-<h2 id="map-and-fileter">map() and fileter()</h2>
+<h2 id="map-and-filter">map() and filter()</h2>
 <h3 id="mapfunction-iterable">map(<em>function, iterable</em>)</h3>
 <p>map() function takes a function and a list. It computes the function for each element of the list.</p>
 <pre><code class="language-python">cube = lambda n : n*n*n
@@ -1855,8 +1973,8 @@ print(list(filter(even, l)))
 {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': &lt;_frozen_importlib_external.SourceFileLoader object at 0x0000022FC686C700&gt;, '__spec__': None, '__annotations__': {}, '__builtins__': &lt;module 'builtins' (built-in)&gt;, '__file__': 'c:\\Users\\JEEKUMA\\Desktop\\BLOB\\water.py', '__cached__': None}
 </code></pre>
 <p>Example code to demonstrate <code>locals()</code> function:</p>
-<p>The <code>locals()</code> funciton call from the outside of the function <code>func()</code> prints all the general local variables in python.</p>
-<p><code>locals()</code> call from the inside of the <code>func()</code> function prints only the local variables defined inside that funciton.</p>
+<p>The <code>locals()</code> function call from the outside of the function <code>func()</code> prints all the general local variables in python.</p>
+<p><code>locals()</code> call from the inside of the <code>func()</code> function prints only the local variables defined inside that function.</p>
 <pre><code class="language-python">a = 10
 b = 20
 
@@ -1892,7 +2010,7 @@ func()
 <pre><code class="language-python">x = [1,2,3,4,5]
 y = [6,7,8,9,10]
 zip_object = zip(x,y)
-print(list(zip_object)) # after zipping two interables
+print(list(zip_object)) # after zipping two iterables
 
 
 p, q = zip(*zip(x,y)) # this is a way to unzip zipped iterables
@@ -1941,7 +2059,7 @@ print(l[slice(0,len(l),2)]) # alternate way of slicing
 #1, 3, 8, 89, 5, 76, 42, 90, 13, 78]
 </code></pre>
 <h2 id="__call__"><code>__call__()</code></h2>
-<p><code>__call__()</code> funtion is practically used to make a class as a decorator and a class instance to be used as a function.</p>
+<p><code>__call__()</code> function is practically used to make a class as a decorator and a class instance to be used as a function.</p>
 <pre><code class="language-python">class trial:
     def __init__(self, name) -&gt; None:
         self.name = name
@@ -1953,32 +2071,32 @@ boy = trial('kevin')
 boy() # object of the class trial called as a function.
 </code></pre>
 <h2 id="string-methods">String Methods</h2>
-<pre><code class="language-python">'''strings are immutable and can not be changed once it is assignedto a variable. But string methods on the other hand can be usedto create a new string with the existing one.'''
+<pre><code class="language-python">'''strings are immutable and can not be changed once it is assigned to a variable. But string methods on the other hand can be used to create a new string with the existing one.'''
 
 
 a=&quot;!!starwar!!&quot;
 a.upper() # outputs a upper case version of the string
 a.lower() # outputs a lower case version of the string
-a.rstrip() # this method strips the occurance of the given 
-#charachter at the end of the string. -&gt; !!starwar
+a.rstrip() # this method strips the occurrence of the given 
+#character at the end of the string. -&gt; !!starwar
 a.strip() # strips the given char from both the sides -&gt; starwar
-a.replace('war', 'jar') # replaces all occurance of `war` with `jar`
+a.replace('war', 'jar') # replaces all occurrence of `war` with `jar`
 # -&gt; !!starjar!!
 </code></pre>
 <pre><code class="language-python">b= &quot;avenger.com&quot;
 b.split('.') # gives ['avenger', 'com']
 b.capitalize() # gives Avenger.com  It converts first char to capital
-b.count('com') # counts the occurrance of `com` in this string. -&gt; 1
+b.count('com') # counts the occurrence of `com` in this string. -&gt; 1
 b.endswith('m') # returns a boolean if the string ends with m -&gt; True
 </code></pre>
-<pre><code class="language-python">'''Both the below methods work the same way but when a given stringis not found find() return -1, index() returns an exception.'''
+<pre><code class="language-python">'''Both the below methods work the same way but when a given string is not found find() return -1, index() returns an exception.'''
 
 
 c = &quot;Spiderman is an avenger&quot;
-c.find('is') # returns the index of the first occurance of `is`
+c.find('is') # returns the index of the first occurrence of `is`
 c.find('was') # returns -1 otherwise
 
-c.index('is') # returns the index of the first occurrance of `is`
+c.index('is') # returns the index of the first occurrence of `is`
 c.index('lwhoeu') # gives and exception saying ValueError
 </code></pre>
 <pre><code class="language-python">isalnum(), isalpha(), islower()
@@ -1988,7 +2106,7 @@ title() # converts the given strings case in to title case.
 <h2 id="list-methods">List Methods</h2>
 <p>To initialize a list with an initial size we can do :</p>
 <pre><code class="language-python">l = [None] * 5
-'''Here the length of the list is 5 and all the 5 elemets if the listis assigned with None'''
+'''Here the length of the list is 5 and all the 5 elements if the list is assigned with None'''
 </code></pre>
 <p>List is a mutable type. Any list methods used on a list will affect the original list.</p>
 <pre><code class="language-python">a = [3,8,2,9,7,5,1,23,54]
@@ -1999,7 +2117,7 @@ a.sort(reverse=True) #[54, 23, 9, 8, 7, 5, 4, 3, 2, 1]
 a = [3,8,2,9,7,5,1,23,54]
 a.reverse() #[54, 23, 1, 5, 7, 9, 2, 8, 3]
 print(a.index(7)) # prints 4 as index of 7 in reversed list is 4
-print(a.count(3)) # prints numer of occurrance of 3 in the list
+print(a.count(3)) # prints number of occurrence of 3 in the list
 
 '''Here Changing an element of b changed the element of a. b is a reference of a '''
 a = [3,8,2,9,7,5,1,23,54]
@@ -2028,7 +2146,7 @@ weighs {{Nothing}}&quot;)
 # voyager is a fly by satellite launched in 1977 weighs {Nothing}
 </code></pre>
 <h2 id="try-except-finally">try-except-finally</h2>
-<p>In try-except-finally, a peice of code is tried. If exception occurs it can be caught in the except block. Finally block always get executed no matter what.</p>
+<p>In try-except-finally, a piece of code is tried. If exception occurs it can be caught in the except block. Finally block always get executed no matter what.</p>
 <pre><code class="language-python">'''demo of finally'''
 def pool():
     try:
@@ -2040,7 +2158,7 @@ def pool():
     finally:
         final wrap up lines
 
-'''Here even after the try or except block hits the return statementfinally gets executed. This is teh speciality of finaly block'''
+'''Here even after the try or except block hits the return statement finally gets executed. This is teh specialty of finally block'''
 </code></pre>
 <h2 id="if-else-in-single-line-statement">if-else in single line statement:</h2>
 <pre><code class="language-python">print(&quot;4 greater than 2&quot;) if 4&gt;2 else print(&quot;5 greater than 3 &quot;) if 5&gt;3 else print(&quot;nothing&quot;)
@@ -2055,12 +2173,12 @@ def pool():
     print(f.read(5)) # read 5 bytes from the current pointer position -&gt; Galax
 
 with open(&quot;file.txt&quot;, '+a') as f:    
-    f.truncate(300) # truncates the file contant into 300 bytes
+    f.truncate(300) # truncates the file content into 300 bytes
 
 '''now reading the file would contain only 300 char'''
 </code></pre>
 <h2 id="decorators">Decorators</h2>
-<p>Decorators take function as an argument and modify it and return a new function. Here raptor is a decorator that takes a function as an argument adds print statements at the beginning and end and returns a new functoin <em>endo()</em></p>
+<p>Decorators take function as an argument and modify it and return a new function. Here raptor is a decorator that takes a function as an argument adds print statements at the beginning and end and returns a new function <em>endo()</em></p>
 <pre><code class="language-python">def raptor(func):
     def endo(*args):
         print(&quot;hello form the decorator&quot;)
@@ -2069,12 +2187,12 @@ with open(&quot;file.txt&quot;, '+a') as f:
     return endo
 
 @raptor
-def avrage(a,b,c):
+def average(a,b,c):
     print(&quot;average is :&quot;)
     print((a+b+c)/3)
 
 if __name__ == &quot;__main__&quot;:
-    avrage(8,1,6)
+    average(8,1,6)
 
 
 output : hello form the decorator
@@ -2092,7 +2210,7 @@ Bye!! from Decorator
     return wrapper_decorator
 </code></pre>
 <h2 id="asterisk-and-as-arguments-to-function">Asterisk * and / as arguments to function</h2>
-<p>When you see an asterisk (*) in the funciton parameter list, it typically indicates that all the parameters following it are keyword-only arguments.</p>
+<p>When you see an asterisk (*) in the function parameter list, it typically indicates that all the parameters following it are keyword-only arguments.</p>
 <pre><code class="language-python">def fixture(  # noqa: F811
     fixture_function: Optional[FixtureFunction] = None,
     *,
@@ -2114,7 +2232,7 @@ Bye!! from Decorator
 </code></pre>
 <h2 id="reversed-and-reverse">reversed() and reverse()</h2>
 <p><code>reverse()</code> is used on the list and it modifies the original list into reversed list.</p>
-<p>On the other hand <code>reversed()</code> is a builtin funciton in python that reverses the original list and provids a new list. The original list remains unchanged.</p>
+<p>On the other hand <code>reversed()</code> is a builtin function in python that reverses the original list and provide a new list. The original list remains unchanged.</p>
 <pre><code class="language-python">lst_ = [1,2,3,4,5,6,7,8,9,0]
 
 lst_.reverse()
@@ -2124,14 +2242,14 @@ print(list(reversed(lst_)))
 &gt;&gt; [0, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 </code></pre>
 <h2 id="sorted-and-sort">Sorted() and sort()</h2>
-<p>Both of these functions use key as an argument where a callabe can be passed.</p>
+<p>Both of these functions use key as an argument where a callable can be passed.</p>
 <p>Syntax of argument for both the functions are as:</p>
 <pre><code class="language-python">sorted(iterable, /, *, key=None, reverse=False) -&gt; iterable
 sort(iterable, /, *, key=None, reverse=False) -&gt; None
 </code></pre>
 <pre><code class="language-python">lst = [6,1,4,0,9,3,8,7,2,5]
 
-print(sorted(lst)) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] Doesnt chaneg the original list
+print(sorted(lst)) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] doesn't change the original list
 print(lst) #[6, 1, 4, 0, 9, 3, 8, 7, 2, 5]
 
 lst.sort()
@@ -2216,7 +2334,7 @@ for _ in range(len(a)):
 <p><code>max(*arg1*, *arg2*, **args*, *key=None*)</code></p>
 <h2 id="isinstance-and-issubclass">isinstance() and issubclass()</h2>
 <p><code>isinstance(object, class)</code> shows if the object is an instance of the given class.</p>
-<p><code>class</code> attribute also accepts a tuple of classes, where thefunction returns true if <code>object</code> attribute is an instance of atlest one of the classes.</p>
+<p><code>class</code> attribute also accepts a tuple of classes, where the function returns true if <code>object</code> attribute is an instance of at lest one of the classes.</p>
 <pre><code class="language-python">class planet:
     pass
 
@@ -2248,7 +2366,7 @@ result = issubclass(Circle, Shape)
 print(result)  # Output: True
 </code></pre>
 <h2 id="open">open()</h2>
-<p>It is recomended to use <code>open</code> in the <code>with</code> statement as it takes care of closing the file once it exits <code>with</code> block. Even when an exception occur.</p>
+<p>It is recommended to use <code>open</code> in the <code>with</code> statement as it takes care of closing the file once it exits <code>with</code> block. Even when an exception occur.</p>
 <p><code>fp</code> is a file object. Like file pointer in other languages.</p>
 <pre><code class="language-python">with open('abcd.txt', 'r') as fp:
     ....
@@ -2258,7 +2376,7 @@ print(result)  # Output: True
 <thead>
 <tr>
 <th>mode</th>
-<th>descritption</th>
+<th>description</th>
 </tr>
 </thead>
 <tbody>
@@ -2346,7 +2464,7 @@ python -m venv .env --upgrade-deps
 
 
 # Create multiple environments
-# Here three python envirinments are created in the exisitng directory.
+# Here three python environments are created in the existing directory.
 python -m venv .env/ .venv/ .environment/
 
 
@@ -2387,6 +2505,11 @@ print(f&quot;Student {s1.name} of age {s1.age} has {s1.grade} grade&quot;)
 </code></pre>
 <h3 id="match-case-statements-in-python">Match case statements in python</h3>
 <p>These are valid form python 3.10. Match case is like switch case in C.</p>
+<h2 id="len">len()</h2>
+<p>A <code>range</code> object doesn’t store all the values but generates them when they’re needed. However, you can still find the length of a <code>range</code> object using <code>len()</code>:</p>
+<pre><code class="language-python">len(range(1, 20, 2))
+&gt;&gt; 10
+</code></pre>
 
 
 

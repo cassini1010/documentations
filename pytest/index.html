@@ -211,11 +211,71 @@
   
   
     <li class="md-nav__item">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Based Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Data_Structurs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Structures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flask/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flask
   </span>
   
 
@@ -371,6 +431,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../PyTorch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../PythonTricks/" class="md-nav__link">
         
   
@@ -416,6 +496,26 @@
   
   <span class="md-ellipsis">
     Sockets in Python:
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timing your python code
   </span>
   
 
@@ -1116,7 +1216,7 @@ SKIPPED (s)
 ERROR (E)
 </code></pre>
 <h3 id="testing-expected-exception">Testing expected exception</h3>
-<p>The normal try-catch block is not suitable for testing expected exceptions. Below code passes if exceptinois raised and fails if it is not raised. But a try-catch block passes the test if exception is raised and caught and it also passes the test of the exception is not raised.</p>
+<p>The normal try-catch block is not suitable for testing expected exceptions. Below code passes if exceptions raised and fails if it is not raised. But a try-catch block passes the test if exception is raised and caught and it also passes the test of the exception is not raised.</p>
 <pre><code class="language-python">import cards
 import pytest
 
@@ -1216,26 +1316,26 @@ def test_two(cards_db):
 any fixture that is in the same test module as a test function, or in a conftest.py
 file in the same directory, or in any level of parent directory up to the root of
 the tests.</p>
-<pre><code class="language-python">pytest --fixtures # will bring all the locatin s of where fixtures are defined
+<pre><code class="language-python">pytest --fixtures # will bring all the locations of where fixtures are defined
 </code></pre>
 <pre><code class="language-python">pytest --fixtures-per-test &lt;folder name or testFile name&gt;
-# prints the fixturs used in test functions
+# prints the fixtures used in test functions
 </code></pre>
 <h2 id="parameterization">Parameterization</h2>
 <p>There are three types aof parameterization</p>
 <ul>
 <li>
-<p>Parametrizing functions</p>
+<p>Parameterising functions</p>
 </li>
 <li>
-<p>Parametrizing fixtures</p>
+<p>Parameterising fixtures</p>
 </li>
 <li>
 <p>Using a hook function called pytest_generate_tests</p>
 </li>
 </ul>
 <h3 id="parameterizing-test-function">Parameterizing test function</h3>
-<p>Test function takes <code>pytest.mark.parametrize</code> decorator to achive this. This takes variable names nd list of parameter values. Variable names can be comma separated strings or list of strings. Values must be in a list (list of tuples).</p>
+<p>Test function takes <code>pytest.mark.parametrize</code> decorator to achieve this. This takes variable names nd list of parameter values. Variable names can be comma separated strings or list of strings. Values must be in a list (list of tuples).</p>
 <pre><code class="language-python"># test_func_param.py
 
 
@@ -1275,8 +1375,8 @@ def test_finish(cards_db, start_state):
 <h3 id="how-to-manage-logging">How to manage logging:</h3>
 <p>Simply pass the name of the test file to be tested to pytest to test it.</p>
 <pre><code class="language-python">pytest test_one.py # tests all the test functions in this python file
-pytest test_card.py::test_defaults # tests only test_defaults funciton in this python file
-pytest &lt;folder name&gt; # tests all the test funcitons present in all the files in thsi folder
+pytest test_card.py::test_defaults # tests only test_defaults function in this python file
+pytest &lt;folder name&gt; # tests all the test functions present in all the files in this folder
 </code></pre>
 <h3 id="a-basic-example">A basic example:</h3>
 <pre><code class="language-python">import logging
@@ -1288,8 +1388,8 @@ def  test_apple():
     logging.error(&quot;LEET error message&quot;)
     print(&quot;this is a print statement&quot;)
 </code></pre>
-<p>Running the above code using <code>pytest</code> is not goig to show any logging messages or the print statement on the console nor a log file is given as an output.</p>
-<p>Using <code>pytest --capture=no</code> to run the test is going to print only the <code>print</code> statements on the console. Here <code>this is a print statement</code> prints on the console and all the logging messages are negelted.</p>
+<p>Running the above code using <code>pytest</code> is not going to show any logging messages or the print statement on the console nor a log file is given as an output.</p>
+<p>Using <code>pytest --capture=no</code> to run the test is going to print only the <code>print</code> statements on the console. Here <code>this is a print statement</code> prints on the console and all the logging messages are neglected.</p>
 <h5 id="print-logging-statements-to-console">Print logging statements to console:</h5>
 <p>To print the logging messages too to the console it is advisable to write a pytest configuration file with logging configurations in it and use <strong><code>caplog</code></strong> fixture to the test.</p>
 <pre><code class="language-ini">pytest.ini file
@@ -1382,13 +1482,13 @@ executions needs to jump to pdb'''
 <p><code>pytest --tb</code> is helpful to log a detailed or rather short traceback when a test fails.</p>
 <pre><code class="language-python">pytest --tb=mode #Traceback print mode (auto/long/short/line/native/no)
 </code></pre>
-<p><code>pytest --full-trace</code> is going to log a whole trace traverced by the test when it falis.</p>
+<p><code>pytest --full-trace</code> is going to log a whole trace traversed by the test when it fails.</p>
 <p>great way to understand the flow of the test script.</p>
 <p><code>pytest -v</code> increases verbosity of logging </p>
 <p><code>pytest -vv</code> increases verbosity to two folds.</p>
 <h6 id="creating-junit-format-output-files">Creating JUnit format output files:</h6>
 <p><code>pytest --junitxml=log.xml</code>  will create a log file <code>log.xml</code> with the standard log details in it.</p>
-<p><code>pytest --full-trace --junitxml.log.xml</code> is an efficient way to analyse code in depth when a test fails.</p>
+<p><code>pytest --full-trace --junitxml.log.xml</code> is an efficient way to analyze code in depth when a test fails.</p>
 <h3 id="the-best-feature-of-pytest-is-pastebin">The best feature of pytest is <code>pastebin</code></h3>
 <p><code>--pastebin=mode</code>       Send <strong>failed|all</strong> info to bpaste.net pastebin service.</p>
 <p>sending all or failed mode to pastebin service creates an instant URL which contains the whole test session log details.</p>
@@ -1422,7 +1522,7 @@ def test_groot(tmp_path_factory):
 </code></pre>
 <p><code>flake8-pytest-style</code> is a  <code>flake8</code> plugin checking common style issues or inconsistencies with <code>pytest</code>-based tests. Could be a helpful tool.</p>
 <h1 id="changing-standard-test-discovery">Changing standard test discovery:</h1>
-<p><code>--ignore=path</code> ignores the test present in the folder path given. path can also be a specific python test file to igonre.</p>
+<p><code>--ignore=path</code> ignores the test present in the folder path given. path can also be a specific python test file to ignore.</p>
 <p><code>--ignore-glob='*_01.p_'</code>  will ignore all the files which ends with glob pattern given.</p>
 <p>pytest discovers tests by recursively searching the directory passed as an argument or current directory if no path is sent as an argument.</p>
 <p><code>pytest src/temp/</code>  or <code>pytest</code></p>
