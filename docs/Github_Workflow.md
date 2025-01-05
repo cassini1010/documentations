@@ -40,7 +40,7 @@ Reports and log files generated in the project could be saved in an artifact usi
     path: output.log
 ```
 
-Download of this report or log file can be done from the artifact using below worflow. The download is often done using a separate workflow. If the download is supposed to be done in the same workflow file, use the `needs: <upload job name>` in the below wrokflow to specify that upload job has to run before hte download job.
+Download of this report or log file can be done from the artifact using below workflow. The download is often done using a separate workflow. If the download is supposed to be done in the same workflow file, use the `needs: <upload job name>` in the below workflow to specify that upload job has to run before hte download job.
 
 ```yaml
 steps:

@@ -44,7 +44,7 @@ print(f)
 >>[1,2,3,4,5,6]
 ```
 
-Unpacking in a function allows us to provide variable number of arguments to the funciton.
+Unpacking in a function allows us to provide variable number of arguments to the function.
 
 ```python
 # Unpacking in function arguments
@@ -63,7 +63,7 @@ print_values(1, 2, 3, 4, 5)
 
 ## pop() method on lists:
 
-`pop()` is used to pop all elemets out of the list. Once the elemets are poped out the list becomes empty. Printing the list now will print an empty list.
+`pop()` is used to pop all elements out of the list. Once the elements are popped out the list becomes empty. Printing the list now will print an empty list.
 
 ```python
 a = [1,2,3,4,5,6,7]
@@ -111,11 +111,11 @@ print("Pass") if marks >= 45 else print("Fail")
 
 ## `importlib` standard library:
 
-This moduel provides the `import_module` function, which allows you to programmatically import a module.
+This module provides the `import_module` function, which allows you to programmatically import a module.
 
 ## for-if-else operation:
 
-##### `list comprehension` and `generators` can be used interchnagably. While generators are more memory efficient list comprehensions are not.
+##### `list comprehension` and `generators` can be used interchangeably. While generators are more memory efficient list comprehensions are not.
 
 ```python
 # using for and if list comprehension and generator
@@ -123,7 +123,7 @@ for_if = [i for i in range(1,10) if i<6]
 >> [1, 2, 3, 4, 5]
 
 
-# using for, if and else in list comprihension and generators
+# using for, if and else in list comprehension and generators
 for_if_else = [5 if i<5 else 10 for i in range(1,20)]
 >>[5, 5, 5, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
 
@@ -137,7 +137,7 @@ if_else = True if 3<5 else False
 
 `print(type(self).__name__)`  is used to print the name of the class to which the instance `self` belongs to.
 
-## Single and double underscore in variable and method/funciton names:
+## Single and double underscore in variable and method/function names:
 
 Leading or trailing single underscore and double underscore has a significance in python. 
 
@@ -219,7 +219,7 @@ FIFO
 
 Adding element to Queue is called `enqueue` 
 
-Retriving element from Queue is called `dequeue`
+Retrieving element from Queue is called `dequeue`
 
 ## Stack
 

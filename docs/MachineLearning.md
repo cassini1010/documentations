@@ -72,7 +72,7 @@ trained_model = model.fit(x_training, y_training, epochs=500,
 # Evaluate the trained model with test data
 loss_val, metric_val = model.evaluate(x_validation, y_validation)
 
-# Use the model to predic using the unknown data
+# Use the model to predict using the unknown data
 predicted_y = model.predict(x_test)
 plt.plot(x_test, predicted_y, 'r.')
 
@@ -89,4 +89,4 @@ model.save('sine.h5')
 
 Loss is measured using the simple technique where we square the distance between the predicted and actual value, add them up, then get the square root of the added result. 
 
-Squaring up the distances makes sure that the negetive and positive distances dont cancel up with each other.
+Squaring up the distances makes sure that the negative and positive distances don't cancel up with each other.

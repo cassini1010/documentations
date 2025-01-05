@@ -25,7 +25,7 @@ print(abs(b))
 lst = [1,3,5,7,9,0]
 print(all(lst)) # False
 lst = [0,0,0,0,0]
-print(any(lst)) # Flase
+print(any(lst)) # False
 ```
 
 ## breakpoint()
@@ -98,7 +98,7 @@ executable = compile(source, '<string>', 'exec')
 exec(executable)
 ```
 
-Real world usage of this is in Scripting engins, making a custom Domain-specific language, Runtime code Evaluation, Code generator tools, code evaluation tools.
+Real world usage of this is in Scripting engines, making a custom Domain-specific language, Runtime code Evaluation, Code generator tools, code evaluation tools.
 
 ## enumerate(iterable)
 
@@ -122,7 +122,7 @@ output:
 ...
 ```
 
-## map() and fileter()
+## map() and filter()
 
 ### map(*function, iterable*)
 
@@ -161,9 +161,9 @@ print(locals())
 
 Example code to demonstrate `locals()` function:
 
-The `locals()` funciton call from the outside of the function `func()` prints all the general local variables in python.
+The `locals()` function call from the outside of the function `func()` prints all the general local variables in python.
 
-`locals()` call from the inside of the `func()` function prints only the local variables defined inside that funciton.
+`locals()` call from the inside of the `func()` function prints only the local variables defined inside that function.
 
 ```python
 a = 10
@@ -206,15 +206,13 @@ for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):
 
 `zip()` stops when the shortest iterable is exhausted.
 
-
-
 ## zip and unzip
 
 ```python
 x = [1,2,3,4,5]
 y = [6,7,8,9,10]
 zip_object = zip(x,y)
-print(list(zip_object)) # after zipping two interables
+print(list(zip_object)) # after zipping two iterables
 
 
 p, q = zip(*zip(x,y)) # this is a way to unzip zipped iterables
@@ -272,7 +270,7 @@ print(l[slice(0,len(l),2)]) # alternate way of slicing
 
 ## `__call__()`
 
-`__call__()` funtion is practically used to make a class as a decorator and a class instance to be used as a function.
+`__call__()` function is practically used to make a class as a decorator and a class instance to be used as a function.
 
 ```python
 class trial:
@@ -289,16 +287,16 @@ boy() # object of the class trial called as a function.
 ## String Methods
 
 ```python
-'''strings are immutable and can not be changed once it is assignedto a variable. But string methods on the other hand can be usedto create a new string with the existing one.'''
+'''strings are immutable and can not be changed once it is assigned to a variable. But string methods on the other hand can be used to create a new string with the existing one.'''
 
 
 a="!!starwar!!"
 a.upper() # outputs a upper case version of the string
 a.lower() # outputs a lower case version of the string
-a.rstrip() # this method strips the occurance of the given 
-#charachter at the end of the string. -> !!starwar
+a.rstrip() # this method strips the occurrence of the given 
+#character at the end of the string. -> !!starwar
 a.strip() # strips the given char from both the sides -> starwar
-a.replace('war', 'jar') # replaces all occurance of `war` with `jar`
+a.replace('war', 'jar') # replaces all occurrence of `war` with `jar`
 # -> !!starjar!!
 ```
 
@@ -306,19 +304,19 @@ a.replace('war', 'jar') # replaces all occurance of `war` with `jar`
 b= "avenger.com"
 b.split('.') # gives ['avenger', 'com']
 b.capitalize() # gives Avenger.com  It converts first char to capital
-b.count('com') # counts the occurrance of `com` in this string. -> 1
+b.count('com') # counts the occurrence of `com` in this string. -> 1
 b.endswith('m') # returns a boolean if the string ends with m -> True
 ```
 
 ```python
-'''Both the below methods work the same way but when a given stringis not found find() return -1, index() returns an exception.'''
+'''Both the below methods work the same way but when a given string is not found find() return -1, index() returns an exception.'''
 
 
 c = "Spiderman is an avenger"
-c.find('is') # returns the index of the first occurance of `is`
+c.find('is') # returns the index of the first occurrence of `is`
 c.find('was') # returns -1 otherwise
 
-c.index('is') # returns the index of the first occurrance of `is`
+c.index('is') # returns the index of the first occurrence of `is`
 c.index('lwhoeu') # gives and exception saying ValueError
 ```
 
@@ -334,7 +332,7 @@ To initialize a list with an initial size we can do :
 
 ```python
 l = [None] * 5
-'''Here the length of the list is 5 and all the 5 elemets if the listis assigned with None'''
+'''Here the length of the list is 5 and all the 5 elements if the list is assigned with None'''
 ```
 
 List is a mutable type. Any list methods used on a list will affect the original list.
@@ -348,7 +346,7 @@ a.sort(reverse=True) #[54, 23, 9, 8, 7, 5, 4, 3, 2, 1]
 a = [3,8,2,9,7,5,1,23,54]
 a.reverse() #[54, 23, 1, 5, 7, 9, 2, 8, 3]
 print(a.index(7)) # prints 4 as index of 7 in reversed list is 4
-print(a.count(3)) # prints numer of occurrance of 3 in the list
+print(a.count(3)) # prints number of occurrence of 3 in the list
 
 '''Here Changing an element of b changed the element of a. b is a reference of a '''
 a = [3,8,2,9,7,5,1,23,54]
@@ -382,7 +380,7 @@ weighs {{Nothing}}")
 
 ## try-except-finally
 
-In try-except-finally, a peice of code is tried. If exception occurs it can be caught in the except block. Finally block always get executed no matter what.
+In try-except-finally, a piece of code is tried. If exception occurs it can be caught in the except block. Finally block always get executed no matter what.
 
 ```python
 '''demo of finally'''
@@ -396,7 +394,7 @@ def pool():
     finally:
         final wrap up lines
 
-'''Here even after the try or except block hits the return statementfinally gets executed. This is teh speciality of finaly block'''
+'''Here even after the try or except block hits the return statement finally gets executed. This is teh specialty of finally block'''
 ```
 
 ## if-else in single line statement:
@@ -417,14 +415,14 @@ with open("file.txt", "r") as f:
     print(f.read(5)) # read 5 bytes from the current pointer position -> Galax
 
 with open("file.txt", '+a') as f:    
-    f.truncate(300) # truncates the file contant into 300 bytes
+    f.truncate(300) # truncates the file content into 300 bytes
 
 '''now reading the file would contain only 300 char'''
 ```
 
 ## Decorators
 
-Decorators take function as an argument and modify it and return a new function. Here raptor is a decorator that takes a function as an argument adds print statements at the beginning and end and returns a new functoin *endo()*
+Decorators take function as an argument and modify it and return a new function. Here raptor is a decorator that takes a function as an argument adds print statements at the beginning and end and returns a new function *endo()*
 
 ```python
 def raptor(func):
@@ -435,12 +433,12 @@ def raptor(func):
     return endo
 
 @raptor
-def avrage(a,b,c):
+def average(a,b,c):
     print("average is :")
     print((a+b+c)/3)
 
 if __name__ == "__main__":
-    avrage(8,1,6)
+    average(8,1,6)
 
 
 output : hello form the decorator
@@ -463,7 +461,7 @@ def decorator(func):
 
 ## Asterisk * and / as arguments to function
 
-When you see an asterisk (*) in the funciton parameter list, it typically indicates that all the parameters following it are keyword-only arguments.
+When you see an asterisk (*) in the function parameter list, it typically indicates that all the parameters following it are keyword-only arguments.
 
 ```python
 def fixture(  # noqa: F811
@@ -497,7 +495,7 @@ default_cfg = "turtle_%s.cfg" % cfgdict1["importconfig"]
 
 `reverse()` is used on the list and it modifies the original list into reversed list.
 
-On the other hand `reversed()` is a builtin funciton in python that reverses the original list and provids a new list. The original list remains unchanged.
+On the other hand `reversed()` is a builtin function in python that reverses the original list and provide a new list. The original list remains unchanged.
 
 ```python
 lst_ = [1,2,3,4,5,6,7,8,9,0]
@@ -511,7 +509,7 @@ print(list(reversed(lst_)))
 
 ## Sorted() and sort()
 
-Both of these functions use key as an argument where a callabe can be passed.
+Both of these functions use key as an argument where a callable can be passed.
 
 Syntax of argument for both the functions are as:
 
@@ -523,7 +521,7 @@ sort(iterable, /, *, key=None, reverse=False) -> None
 ```python
 lst = [6,1,4,0,9,3,8,7,2,5]
 
-print(sorted(lst)) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] Doesnt chaneg the original list
+print(sorted(lst)) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] doesn't change the original list
 print(lst) #[6, 1, 4, 0, 9, 3, 8, 7, 2, 5]
 
 lst.sort()
@@ -662,7 +660,7 @@ Takes iterable and gives max or min accordingly.
 
 `isinstance(object, class)` shows if the object is an instance of the given class.
 
-`class` attribute also accepts a tuple of classes, where thefunction returns true if `object` attribute is an instance of atlest one of the classes.
+`class` attribute also accepts a tuple of classes, where the function returns true if `object` attribute is an instance of at lest one of the classes.
 
 ```python
 class planet:
@@ -701,7 +699,7 @@ print(result)  # Output: True
 
 ## open()
 
-It is recomended to use `open` in the `with` statement as it takes care of closing the file once it exits `with` block. Even when an exception occur.
+It is recommended to use `open` in the `with` statement as it takes care of closing the file once it exits `with` block. Even when an exception occur.
 
 `fp` is a file object. Like file pointer in other languages.
 
@@ -712,7 +710,7 @@ with open('abcd.txt', 'r') as fp:
 
 ### mode parameter can be:
 
-| mode         | descritption                |
+| mode         | description                |
 | ------------ | --------------------------- |
 | 'r'          | open the file in read mode  |
 | 'w'          | open the file in write mode |
@@ -784,7 +782,7 @@ python -m venv .env --upgrade-deps
 
 
 # Create multiple environments
-# Here three python envirinments are created in the exisitng directory.
+# Here three python environments are created in the existing directory.
 python -m venv .env/ .venv/ .environment/
 
 
@@ -841,3 +839,14 @@ print(15//4)
 ### Match case statements in python
 
 These are valid form python 3.10. Match case is like switch case in C.
+
+
+
+## len()
+
+A `range` object doesn’t store all the values but generates them when they’re needed. However, you can still find the length of a `range` object using `len()`:
+
+```python
+len(range(1, 20, 2))
+>> 10
+```

@@ -1,5 +1,7 @@
 # Git
 
+Git is a Distributed version control system  (DVCS)
+
 ## Getting started
 
 Git has three main states that your files can reside in *modified*, *staged*, and *committed*.
@@ -8,7 +10,7 @@ The most official build is available for download on the Git website. Just go to
 
 Note that this is a project called Git for Windows, which is separate from Git itself; for more information on it, go to [https://gitforwindows.org](https://gitforwindows.org/).
 
-#### Config
+### Config
 
 You can view all of your settings and where they are coming from using
 
@@ -25,10 +27,10 @@ git config --list
 There are `--system` `--local` `--global` configurations in git. To list global settings/configurations and their origin
 
 ```git
-git --list --global --show-origin
+git config --list --global --show-origin
 ```
 
-#### Help
+### Help
 
 Use `--help` to get a full-blown man page
 
@@ -40,9 +42,9 @@ git status --help
 
 #### 
 
-# Git Basics
+## Git Basics
 
-#### Turn an existing directory into Git repository
+### Turn an existing directory into Git repository
 
 Run `git init` in that directory.
 
@@ -50,7 +52,7 @@ Run `git init` in that directory.
 git init
 ```
 
-#### Clone
+### Clone
 
 This is another way to have a git repository. To have a desired name for the repository to be cloned use below command.
 
@@ -62,14 +64,14 @@ Here mylibgit is a desired name given to the cloned repo.
 
 Above example uses the `https://` protocol, but you may also see `git://` or `user@server:path/to/repo.git`, which uses the SSH transfer protocol.
 
-#### status
+### status
 
 ```git
 git status        # to check the status of the local repo
 git status -s     # gives a short status
 ```
 
-#### add and commit
+### add and commit
 
 ```git
 git add <file/folder names> ....   # adds files/folders into staging area
@@ -78,7 +80,7 @@ git commit -m <commit message>     # uses the files in staging area to make a ne
 
 <mark>Status, add and commit are the mostly used commands on daily basis in git.</mark>
 
-### <u>diff</u>
+### diff
 
 To see what you’ve changed but not yet staged, type `git diff` with no other arguments. This command compares what is in your 'working directory' with what is in your 'staging area'.
 
@@ -119,7 +121,7 @@ git log
 git log --patch ##shows the difference introduced in each commit.
 git log --patch -2 ## to limit the results to latest 2 commits
 
-git log --graph ## gives a good graphicla representaiton of branching.
+git log --graph ## gives a good graphical representation of branching.
 
 git log --oneline ## prints a brief description of every commit.
 ```
@@ -140,7 +142,7 @@ git log -- path/to/file
 git log <branch name>  ## commit history of desired branch
 
 Much useful one:
-git log --oneline --graph --all  ## oneline commit history of all branchs and a nice graph representation 
+git log --oneline --graph --all  ## oneline commit history of all branches and a nice graph representation 
 ```
 
 #### amend
@@ -166,10 +168,10 @@ git remote update
 
 ```git
 git fetch origin
-git fetch mint ## fetches the changes that remote has and local doesnt have
+git fetch mint ## fetches the changes that remote has and local doesn't have
 ```
 
-#### To see detials about remote
+#### To see details about remote
 
 ```git
 git remote show <origin>
@@ -193,18 +195,18 @@ git remote remove ginger  ## removes ginger remote.
 git config --global alias.co checkout
 ```
 
-here `checkout` is aliased as co and you can use `git co` to run the commit command. This could be helpful to perform repeatative commands in a efficient way.
+here `checkout` is aliased as co and you can use `git co` to run the commit command. This could be helpful to perform repetitive commands in a efficient way.
 
-#### Tagging
+### Tagging
 
  Tags represent specific points in a repository’s history as being ***important***.
 
 ```git
-git tag [optional -l] ## lists the exisitng tags in the repository
+git tag [optional -l] ## lists the existing tags in the repository
 
 
 git tag -a v1.0.0 -m "<message for tagging>" ## annotated tagging, consists of detailed info on a commit 
-git tag v1.0.0 ## light-weight tagging, only contains the cheksum of the commit
+git tag v1.0.0 ## light-weight tagging, only contains the checksum of the commit
 ```
 
 To tag a commit in the later point;
@@ -230,7 +232,7 @@ git push origin --delete <tag-name>
 
 ## Git graphical interface
 
-When git is installed graphical visualisation tools like `gitk` and `git-gui` are also installed.
+When git is installed graphical visualization tools like `gitk` and `git-gui` are also installed.
 
 `gitk` is a graphical history viewer. Can be used as a powerful version of the `git log`
 
@@ -263,7 +265,7 @@ If you want to use a graphical tool to resolve merge issues, you can run `git m
 git mergetool --tool=<tool>
 ```
 
-To see what branchs are merged/not merged to the current branch,
+To see what branches are merged/not merged to the current branch,
 
 ```git
 git branch --merged [optional branch name]
@@ -311,7 +313,7 @@ If you run `git add` with the `-i` or `--interactive` option, Git enters a
 
 #### Stash
 
-To save your half done work in order to swith to a different branch, use;
+To save your half done work in order to switch to a different branch, use;
 
 ```git
 git stash
@@ -323,7 +325,7 @@ To see which stashes you’ve stored, you can use;
 git stash list
 ```
 
-To apply the stash after you are back to the branch wiht half done work use below command. This will apply the latest stash available in the list.
+To apply the stash after you are back to the branch with half done work use below command. This will apply the latest stash available in the list.
 
 ```git
 git stash apply # apply latest stash
@@ -352,5 +354,5 @@ git grep -n main # here main is the search string.
 To show the search result in a summary use
 
 ```git
-git grep --count main # main is the searcch string
+git grep --count main # main is the search string
 ```

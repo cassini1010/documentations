@@ -6,7 +6,7 @@
 
 System crash log files are located in `/var/log` in linux and for windows we can look at the `Event Viewer` tool.
 
-`strace` (system trace) can also be used in linux to find out which system call is made dering the crash to identify the root cause. 
+`strace` (system trace) can also be used in linux to find out which system call is made during the crash to identify the root cause. 
 
 # Configuration management Cloud
 
@@ -83,6 +83,28 @@ renice -> modify the priority of a running process
 pidof jellyfin # prints the PID of the running process named jellyfin
 
 
-ps ax | less # shows all the runnig process on computer
-# less is used to scroll through the commmand line output
+ps ax | less # shows all the running process on computer
+# less is used to scroll through the command line output
 ```
+
+## Using python to interact with OS
+
+Use `perato principle` determine which task to automate
+
+### Some of the useful system adm function in python
+
+- shutil.disk_usage
+
+- `psutil` Module
+
+
+
+
+
+
+
+
+
+## Configuration management and the Cloud
+
+In this course we learn `puppet` which is current industry standard for configuration management.

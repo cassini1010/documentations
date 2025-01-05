@@ -66,7 +66,7 @@ If you want to modify a global variable inside a function, then you need to expl
 
 
 
-`nonlocal` keyword is similar to `global` keyword. Only, it is used to in case of nested funcitons where a outer scoped variable is made use inside a inner function. 
+`nonlocal` keyword is similar to `global` keyword. Only, it is used to in case of nested functions where a outer scoped variable is made use inside a inner function. 
 
 ```python
     def trial():
@@ -107,7 +107,7 @@ trial()
 
 
 
-## globals() funciton:
+## globals() functions:
 
 This function comes in handy when you have local variables with the same name as your target global variables, and you still need to use the global variable inside the function:
 
@@ -143,6 +143,6 @@ This function comes in handy when you have local variables with the same name as
   ID = '1234235356'
   ```
 
-- Use a function that takes argument and modifieds it and returns it if you need a global kind of variable which needs to be modified.
+- Use a function that takes argument and modified it and returns it if you need a global kind of variable which needs to be modified.
 
-- Create a class and use the calss attribute as a gobal variable throught the class.
+- Create a class and use the class attribute as a global variable throughout the class.

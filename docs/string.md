@@ -17,8 +17,8 @@ The lowercase letters `'abcdefghijklmnopqrstuvwxyz'`. This value is not locale-
 ### Unpacking form string:
 
 ```python
-print("{0} is your firt alphabet".format(*"jeevan"))
->> j is your firt alphabet
+print("{0} is your first alphabet".format(*"jeevan"))
+>> j is your first alphabet
 
 
 print('{2}, {1}, {0}'.format(*'abc'))      # unpacking argument sequence

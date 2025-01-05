@@ -8,15 +8,15 @@
 
 ###### `control` command opens control panel window.
 
-###### `wmic`command can be used as below to uninstall programms from CMD
+###### `wmic`command can be used as below to uninstall programs from CMD
 
 ```shell
 Run "wmic" command
-Run "product get name" to list out the applicaitons.
+Run "product get name" to list out the applications.
 Run "product where name='Python 3.9.13 Standard Library (64-bit)' call uninstall" command
 ```
 
-# VS-CODE erorr in Power shell : Cannot be loaded because running scripts is disabled on this system
+# VS-CODE error in Power shell : Cannot be loaded because running scripts is disabled on this system
 
 Run the following command and confirm with ‘Y’ 
 

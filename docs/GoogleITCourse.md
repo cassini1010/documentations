@@ -24,7 +24,7 @@ If you want python to consider a directory consisting of python files as a modul
 
 # Git
 
-TO avoind entering username and password every time when you clone a repo or push the changes;
+To avoid entering username and password every time when you clone a repo or push the changes;
 
 - Generate SSH key pair and store the public in your profile
 

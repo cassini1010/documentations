@@ -24,7 +24,7 @@ logging.error('And non-ASCII stuff, too, like Øresund and Malmö')
 
 `logging.basicConfig` is used to log the messages in a file given in `filename` keyword argument.
 
-`level=logging.DEBUG` logs all the messgaes given.
+`level=logging.DEBUG` logs all the messages given.
 
 ```shell
 example.log
@@ -44,7 +44,7 @@ example.log
 2023-07-27 08:43:27 AM : ERROR : And non-ASCII stuff, too, like Øresund and Malmö
 ```
 
-`format` is used to format the apperance of the message in the file.
+`format` is used to format the appearance of the message in the file.
 
 
 
@@ -65,11 +65,11 @@ with `format='%(asctime)s : %(levelname)s : %(message)`
   2023-07-27 08:43:27 AM : INFO : So should this
 ```
 
-- Default `filemode` is `r` . This keepes appending the messages to the file on each run of the project. `w` overwrites the file on each run of the projcet.
+- Default `filemode` is `r` . This keeps appending the messages to the file on each run of the project. `w` overwrites the file on each run of the project.
 
 ## Advanced Logging
 
-Four catogoris of logging:
+Four categories of logging:
 
 - Loggers
 
@@ -141,7 +141,7 @@ OUTPUT :
 2023-08-03 22:24:59,106 - __main__ - CRITICAL - critical message
 ```
 
-#### Same logging can be achived using a configuration file:
+#### Same logging can be achieved using a configuration file:
 
 ```python
 import logging

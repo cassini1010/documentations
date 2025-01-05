@@ -16,7 +16,7 @@
 
 ## Hiding the Source Code
 
-The bundled app does not include any source code. However, PyInstaller bundles compiled Python scripts (`.pyc` files). These could in principle be decompiled to reveal the logic of your code.
+The bundled app does not include any source code. However, PyInstaller bundles compiled Python scripts (`.pyc` files). These could in principle be de-compiled to reveal the logic of your code.
 
 If you want to hide your source code more thoroughly, one possible option is to compile some of your modules with [Cython](http://www.cython.org/). Using Cython you can convert Python modules into C and compile the C to machine language. PyInstaller can follow import statements that refer to Cython C object modules and bundle them.
 

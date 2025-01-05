@@ -46,7 +46,7 @@ ERROR (E)
 
 ### Testing expected exception
 
-The normal try-catch block is not suitable for testing expected exceptions. Below code passes if exceptinois raised and fails if it is not raised. But a try-catch block passes the test if exception is raised and caught and it also passes the test of the exception is not raised.
+The normal try-catch block is not suitable for testing expected exceptions. Below code passes if exceptions raised and fails if it is not raised. But a try-catch block passes the test if exception is raised and caught and it also passes the test of the exception is not raised.
 
 ```python
 import cards
@@ -163,12 +163,12 @@ file in the same directory, or in any level of parent directory up to the root o
 the tests.
 
 ```python
-pytest --fixtures # will bring all the locatin s of where fixtures are defined
+pytest --fixtures # will bring all the locations of where fixtures are defined
 ```
 
 ```python
 pytest --fixtures-per-test <folder name or testFile name>
-# prints the fixturs used in test functions
+# prints the fixtures used in test functions
 ```
 
 
@@ -177,9 +177,9 @@ pytest --fixtures-per-test <folder name or testFile name>
 
 There are three types aof parameterization
 
-- Parametrizing functions
+- Parameterising functions
 
-- Parametrizing fixtures
+- Parameterising fixtures
 
 -  Using a hook function called pytest_generate_tests
 
@@ -187,7 +187,7 @@ There are three types aof parameterization
 
 ### Parameterizing test function
 
-Test function takes `pytest.mark.parametrize` decorator to achive this. This takes variable names nd list of parameter values. Variable names can be comma separated strings or list of strings. Values must be in a list (list of tuples).
+Test function takes `pytest.mark.parametrize` decorator to achieve this. This takes variable names nd list of parameter values. Variable names can be comma separated strings or list of strings. Values must be in a list (list of tuples).
 
 ```python
 # test_func_param.py
@@ -250,8 +250,8 @@ Simply pass the name of the test file to be tested to pytest to test it.
 
 ```python
 pytest test_one.py # tests all the test functions in this python file
-pytest test_card.py::test_defaults # tests only test_defaults funciton in this python file
-pytest <folder name> # tests all the test funcitons present in all the files in thsi folder
+pytest test_card.py::test_defaults # tests only test_defaults function in this python file
+pytest <folder name> # tests all the test functions present in all the files in this folder
 ```
 
 ### A basic example:
@@ -267,9 +267,9 @@ def  test_apple():
     print("this is a print statement")
 ```
 
-Running the above code using `pytest` is not goig to show any logging messages or the print statement on the console nor a log file is given as an output.
+Running the above code using `pytest` is not going to show any logging messages or the print statement on the console nor a log file is given as an output.
 
-Using `pytest --capture=no` to run the test is going to print only the `print` statements on the console. Here `this is a print statement` prints on the console and all the logging messages are negelted.
+Using `pytest --capture=no` to run the test is going to print only the `print` statements on the console. Here `this is a print statement` prints on the console and all the logging messages are neglected.
 
 ##### Print logging statements to console:
 
@@ -397,7 +397,7 @@ executions needs to jump to pdb'''
 pytest --tb=mode #Traceback print mode (auto/long/short/line/native/no)
 ```
 
-`pytest --full-trace` is going to log a whole trace traverced by the test when it falis.
+`pytest --full-trace` is going to log a whole trace traversed by the test when it fails.
 
 great way to understand the flow of the test script.
 
@@ -409,7 +409,7 @@ great way to understand the flow of the test script.
 
 `pytest --junitxml=log.xml`  will create a log file `log.xml` with the standard log details in it.
 
-`pytest --full-trace --junitxml.log.xml` is an efficient way to analyse code in depth when a test fails.
+`pytest --full-trace --junitxml.log.xml` is an efficient way to analyze code in depth when a test fails.
 
 ### The best feature of pytest is `pastebin`
 
@@ -459,7 +459,7 @@ pip install flake8-pytest-style
 
 # Changing standard test discovery:
 
-`--ignore=path` ignores the test present in the folder path given. path can also be a specific python test file to igonre.
+`--ignore=path` ignores the test present in the folder path given. path can also be a specific python test file to ignore.
 
 `--ignore-glob='*_01.p_'`  will ignore all the files which ends with glob pattern given.
 

@@ -23,7 +23,7 @@ To `ssh` from a Debian WSL to an Ubuntu-Server first you need to have `openssh-c
 ssh username@<ip-add of server>
 ```
 
-## to get rid of extering password to login to remote-server
+## to get rid of entering password to login to remote-server
 
 Use SSH public key encryption to get rid of typing the password all the time when you login to your server. This requires you to generate ssh keypairs.
 
@@ -39,7 +39,7 @@ Copy the content of  `id_rsa.pub` file to a file called `authorized_keys` in `~/
 
 ## scp
 
-`scp` is a file copy/file transfer protocol unlike ftp. It is most secure way of trasfering files between the remote systems.
+`scp` is a file copy/file transfer protocol unlike ftp. It is most secure way of transferring files between the remote systems.
 
 ```shell
 scp "D:\girishree studio\KIS_9487.JPG" jeevan@192.168.30.6:/home/jeevan/Movies
@@ -79,7 +79,7 @@ In order to run a GUI application in server X11 server can be used.
 
 - Start an X11 server in windows system Ex; Xming server
 
-- Open PuTTY and enable the X11 configuratoin and login to server.
+- Open PuTTY and enable the X11 configuration and login to server.
 
 - Start a GUI application Ex; gedit
 
@@ -98,7 +98,7 @@ Public key encrypts the data. Private key decrypts the data.
 
 ### How Public-Private Key Cryptography Works
 
-If A wants to send a message to B, A takes public key of B and encrypts the message with it and sends it to B. B uses the private key associated with his public key to decrypt the message. Since messgae is encrypted with B's Public key, it can only be decrypted by B's private key. So no middle man in between can decrypt the message and messgge is safe.
+If A wants to send a message to B, A takes public key of B and encrypts the message with it and sends it to B. B uses the private key associated with his public key to decrypt the message. Since message is encrypted with B's Public key, it can only be decrypted by B's private key. So no middle man in between can decrypt the message and message is safe.
 
 However, with this form of messaging there is no way to authenticate the source of the message. Anonymous person C can act like A to send message to B. Bjust thinks that the message came from A but actually its not.
 
