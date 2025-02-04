@@ -39,7 +39,8 @@ Certificate consist of 3 main sections
 
 ## ECU Authentication with PKI Certificate Exchange
 
-![a](./../images/ECUAuthentication.png)
+![a](https://github.com/cassini1010/documentations/blob/master/images/ECUAuthentication.png)
+
 ### Proof of ownership
 
 When an ECU receives the certificate, it doesn't know if the tester owns the private key. So it sends challenge to the tester to encrypt it using the testers private key. ECU verifies the received response using testers public key, hence verifying the ownership.
@@ -50,7 +51,7 @@ Proof of ownership can be bidirectional if needed to protect the tester form ECU
 
 In most ECUs that contain certificates, the certificates are organized in a hierarchical structure known as a certificate chain. The chain starts with the root CA certificate, which is self-signed and acts as the trust anchor for the complete chain. One or multiple Intermediate CAs certificates can follow the root CA certificate. The Intermediate CAs certificates are then used to sign and issue end entity certificates.
 
-![a](./../images/KB0014855_3.png)
+![a](https://github.com/cassini1010/documentations/blob/master/images/KB0014855_3.png)
 
 ### Create RootCA
 
