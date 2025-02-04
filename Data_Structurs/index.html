@@ -303,6 +303,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sorting-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting Technique
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -422,7 +431,7 @@
         
   
   <span class="md-ellipsis">
-    Interpreted languages:
+    GoogleIT Course
   </span>
   
 
@@ -864,6 +873,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sorting-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sorting Technique
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1019,6 +1037,297 @@ class SingleLinkedList:
         tail.next = Node(data)
         self.tail = tail.next
 </code></pre>
+<h2 id="sorting-technique">Sorting Technique</h2>
+<p>Most efficient sorting technique is <code>Quick sort</code> , <code>Merge Sort</code> and <code>Heap Sort</code> </p>
+<blockquote>
+<p>Merge sort is used to sort Linked Lists</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Best Case</th>
+<th>Worst Case</th>
+<th>Average Case</th>
+<th>Space Complexity</th>
+<th>Stable?</th>
+<th>In-place?</th>
+<th>Suitable For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Bubble Sort</strong></th>
+<th>O(n)</th>
+<th>O(n²)</th>
+<th>O(n²)</th>
+<th>O(1)</th>
+<th>✅</th>
+<th>✅</th>
+<th>Small datasets, nearly sorted lists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Selection Sort</strong></th>
+<th>O(n²)</th>
+<th>O(n²)</th>
+<th>O(n²)</th>
+<th>O(1)</th>
+<th>❌</th>
+<th>✅</th>
+<th>Small datasets, learning purposes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Insertion Sort</strong></th>
+<th>O(n)</th>
+<th>O(n²)</th>
+<th>O(n²)</th>
+<th>O(1)</th>
+<th>✅</th>
+<th>✅</th>
+<th>Small datasets, nearly sorted lists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Merge Sort</strong></th>
+<th>O(n log n)</th>
+<th>O(n log n)</th>
+<th>O(n log n)</th>
+<th>O(n)</th>
+<th>✅</th>
+<th>❌</th>
+<th>Large datasets, linked lists</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Quicksort</strong></th>
+<th>O(n log n)</th>
+<th>O(n²)</th>
+<th>O(n log n)</th>
+<th>O(log n)</th>
+<th>❌</th>
+<th>✅</th>
+<th>General-purpose sorting, most efficient in practice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Counting Sort</strong></th>
+<th>O(n + k)</th>
+<th>O(n + k)</th>
+<th>O(n + k)</th>
+<th>O(k)</th>
+<th>✅</th>
+<th>❌</th>
+<th>When <code>k</code> (range of values) is small</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Radix Sort</strong></th>
+<th>O(nk)</th>
+<th>O(nk)</th>
+<th>O(nk)</th>
+<th>O(n + k)</th>
+<th>✅</th>
+<th>❌</th>
+<th>Large integers, fixed-length keys</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Bucket Sort</strong></th>
+<th>O(n + k)</th>
+<th>O(n²)</th>
+<th>O(n + k)</th>
+<th>O(n)</th>
+<th>✅</th>
+<th>❌</th>
+<th>Uniformly distributed numbers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Heap Sort</strong></th>
+<th>O(n log n)</th>
+<th>O(n log n)</th>
+<th>O(n log n)</th>
+<th>O(1)</th>
+<th>❌</th>
+<th>✅</th>
+<th>Priority queues, when space is limited</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Shell Sort</strong></th>
+<th>O(n log n)</th>
+<th>O(n²)</th>
+<th>O(n log n)</th>
+<th>O(1)</th>
+<th>❌</th>
+<th>✅</th>
+<th>Medium-sized datasets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
