@@ -1,5 +1,57 @@
 # Data Structures
 
+Data structure is the collection of datatypes.
+
+> For example, Linear data structure is a collection of sequential datatypes like List, LinkedList,Queue, Stack
+
+
+
+## Linear DataStructure
+
+It is a collection of datatypes where data is arranged sequentially. 
+
+Ex : Array, Linkedlist, Queue, Stack
+
+
+
+## Non-linear Data Structure
+
+It is a collection of data type where the data is arranged non linearly (hierarchical order).
+
+Ex: Tree, Graph, Map
+
+
+
+## Asymptotic notations
+
+There are three asymptotic notation
+
+- Big O notation 
+
+- Omega notation
+
+- Theta notation
+
+
+
+### Big O notation
+
+Big O notation describs the upper bound of a function that is worst case complexity of an algorithm or functoin. 
+
+
+
+### Omega (Ω) notation
+
+Omega notation describs about the lower bound of a function that is the best case coplexity of an algorithm or a functoin.
+
+
+
+### Theta (θ) notation
+
+Theta notation describes the average 
+
+
+
 ## Linked List
 
 Since adding and deleting of the element at the beginning and end of a list is efficient using `linked lists` , these are used to construct `Queues`
@@ -8,7 +60,7 @@ Since adding and deleting of the element at the beginning and end of a list is e
 | ----------------------------------- | ----------------------- | ------------------------------ | --------------------------------------------------------------- |
 | add/remove element to the beginning | O(n)                    | O(1)                           |                                                                 |
 | add/remove element at the end       | O(1)                    | O(1)                           |                                                                 |
-| Retrieve element                     | O(1)                    | O(n)                           | List uses indexes which is faster. Linked list uses traversing. |
+| Retrieve element                    | O(1)                    | O(n)                           | List uses indexes which is faster. Linked list uses traversing. |
 | Search for specific element         | O(n)                    | O(n)                           | Both uses traversing to search element                          |
 
 `List` uses contiguous memory allotment. To append to the left/head of the list it takes O(n) computations, as a new empty memory block has to be created at the beginning of the list. This operation requires existing elements to shift one position to the right resulting in `n` operations. Similarly, removing an element form the left also requires each remaining elements to be shifted to the left, resulting in `n-1` operations and hence O(n) time complexity.
@@ -24,10 +76,6 @@ Recommended to be used for the implementation of `queues` and `stacks`
 If thread operations are used on  `queues` and `stacks` , it is recommended to use `Queues` library in python. But `deques` can also be used with some trade offs. 
 
 <mark>`deques` have a feature to restrict the maximum length of your deques.</mark>
-
-
-
-
 
 ## Linked list without using `deque` library:
 
@@ -49,7 +97,7 @@ class SingleLinkedList:
     def __init__(self) -> None:
         self.head = None
         self.tail = None
-    
+
     def __repr__(self) -> str:
         head = self.head
         sll_repr = []
@@ -57,7 +105,7 @@ class SingleLinkedList:
             sll_repr.append(head.data)
             head = head.next
         return "->".join(sll_repr)
-    
+
     def append(self, data):
         '''- This method doesn't use the tail parameter
            - Uses traversal to get to the point where append
@@ -107,7 +155,7 @@ class SingleLinkedList:
             self.head = self.head.next
         except AttributeError:
             raise EmptyLinkedList("Operating on empty linked list") from None
-        
+
     def tail_append(self, data):
         '''- Tail append uses tail parameter
            - appending to the tail takes O(1) time complexity
@@ -126,3 +174,42 @@ class SingleLinkedList:
         tail.next = Node(data)
         self.tail = tail.next
 ```
+
+## Sorting Technique
+
+Most efficient sorting technique is `Quick sort` , `Merge Sort` and `Heap Sort` 
+
+> Merge sort is used to sort Linked Lists
+
+| Algorithm | Best Case | Worst Case | Average Case | Space Complexity | Stable? | In-place? | Suitable For |
+| --------- | --------- | ---------- | ------------ | ---------------- | ------- | --------- | ------------ |
+
+| **Bubble Sort** | O(n) | O(n²) | O(n²) | O(1) | ✅   | ✅   | Small datasets, nearly sorted lists |
+| --------------- | ---- | ----- | ----- | ---- | --- | --- | ----------------------------------- |
+
+| **Selection Sort** | O(n²) | O(n²) | O(n²) | O(1) | ❌   | ✅   | Small datasets, learning purposes |
+| ------------------ | ----- | ----- | ----- | ---- | --- | --- | --------------------------------- |
+
+| **Insertion Sort** | O(n) | O(n²) | O(n²) | O(1) | ✅   | ✅   | Small datasets, nearly sorted lists |
+| ------------------ | ---- | ----- | ----- | ---- | --- | --- | ----------------------------------- |
+
+| **Merge Sort** | O(n log n) | O(n log n) | O(n log n) | O(n) | ✅   | ❌   | Large datasets, linked lists |
+| -------------- | ---------- | ---------- | ---------- | ---- | --- | --- | ---------------------------- |
+
+| **Quicksort** | O(n log n) | O(n²) | O(n log n) | O(log n) | ❌   | ✅   | General-purpose sorting, most efficient in practice |
+| ------------- | ---------- | ----- | ---------- | -------- | --- | --- | --------------------------------------------------- |
+
+| **Counting Sort** | O(n + k) | O(n + k) | O(n + k) | O(k) | ✅   | ❌   | When `k` (range of values) is small |
+| ----------------- | -------- | -------- | -------- | ---- | --- | --- | ----------------------------------- |
+
+| **Radix Sort** | O(nk) | O(nk) | O(nk) | O(n + k) | ✅   | ❌   | Large integers, fixed-length keys |
+| -------------- | ----- | ----- | ----- | -------- | --- | --- | --------------------------------- |
+
+| **Bucket Sort** | O(n + k) | O(n²) | O(n + k) | O(n) | ✅   | ❌   | Uniformly distributed numbers |
+| --------------- | -------- | ----- | -------- | ---- | --- | --- | ----------------------------- |
+
+| **Heap Sort** | O(n log n) | O(n log n) | O(n log n) | O(1) | ❌   | ✅   | Priority queues, when space is limited |
+| ------------- | ---------- | ---------- | ---------- | ---- | --- | --- | -------------------------------------- |
+
+| **Shell Sort** | O(n log n) | O(n²) | O(n log n) | O(1) | ❌   | ✅   | Medium-sized datasets |
+| -------------- | ---------- | ----- | ---------- | ---- | --- | --- | --------------------- |

@@ -85,3 +85,37 @@ openssl req -new -sha256 -key User_KeyFile.pem -config openssl.cnf -out User_CSR
 
 openssl x509 -days 365 -req -in User_CSR_Certificate.csr -CA Inter_Certificate.crt -CAkey Inter_KeyFile.pem -CAcreateserial -out User_Certificate.crt
 ```
+
+## ODX
+
+### What is ODX?
+
+Open Diagnostic data Exchange - ISO 22901 - 1
+
+`ODX-D` is diagnostic data. most commonly used odx file. 
+
+`ODX-V` vehicle information
+
+`ODX-F` Software update / Flash information. `Flashing an ECU` is nothing but a software update to the ECU. ODX-F only tells about the data that needs to be flashed. Its the job of tester tool to know which request to send in what order.
+
+`ODX-E` ECU configuration data.
+
+`ODX-FD` Funciton oriented DIagnostics
+
+Between ODX files and within ODX files linking, Referencing and Inheritance can be seen. Understanding of which is very essential to work on ODX data.
+
+`PDX` Packaged ODX containers has various different ODX files
+
+ECU - > Electronic control unit
+
+New generation of ECus are `HCPs` High performance computing platforms
+
+## AUTOSAR
+
+For `HCPs`  -> AUTOSAR Adaptive platform
+
+for other `ECUs` ->  AUTOSAR classic platform
+
+File formate used is `ARXML`
+
+> HCPs/HPCs  are GPUs that have high performance compared to ECUs. HPCs have data centric capabilities while the ECUs have hardware centric capabilities. A vehicle will have both HPC and ECU for both hardware and data work together.

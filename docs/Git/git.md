@@ -240,7 +240,7 @@ When git is installed graphical visualization tools like `gitk` and `git-gui`
 
 ## pygit2
 
-The bindings for Libgit2 in Python are called Pygit2, and can be found at [https://www.pygit2.org](https//www.pygit2.org/).
+The bindings for Libgit2 in Python are called Pygit2, and can be found at [https://www.pygit2.org](https://www.pygit2.org/).
 
 # Git Branching
 

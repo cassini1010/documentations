@@ -1,4 +1,77 @@
 site_name: Doc-Study
-
+site_url: https://cassini1010.github.io/documentations
+plugins:
+  - blog
 theme:
-  name: "material"
+  features:
+    - navigation.tabs
+  name: material
+  favicon: assets\favicon.ico
+  language: en
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+      
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+extra:
+  analytics:
+    provider: google
+    property: G-6TEMF0BM7J
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Deutsch
+      link: /de/
+      lang: de
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+      actions:
+      - accept
+      - manage
+      - reject
+markdown_extensions:
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+    
