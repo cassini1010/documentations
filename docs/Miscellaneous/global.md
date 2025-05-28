@@ -60,11 +60,7 @@ If you want to modify a global variable inside a function, then you need to expl
 2. The built-in `globals()` function
 3. The `nonlocal` keyword
 
-
-
 ### Using `nonlocal` keyword:
-
-
 
 `nonlocal` keyword is similar to `global` keyword. Only, it is used to in case of nested functions where a outer scoped variable is made use inside a inner function. 
 
@@ -77,12 +73,10 @@ If you want to modify a global variable inside a function, then you need to expl
             a=100
         inner_func()
         print(a)
-    
+
 trial()
 >>> UnboundLocalError
 ```
-
-
 
 #### Fixing UnboundLocalError above:
 
@@ -102,16 +96,11 @@ trial()
 >>> 10
 >>> 10
 >>> 100
-    
 ```
-
-
 
 ## globals() functions:
 
 This function comes in handy when you have local variables with the same name as your target global variables, and you still need to use the global variable inside the function:
-
-
 
 ```python
 >>> a = 10
@@ -131,8 +120,6 @@ This function comes in handy when you have local variables with the same name as
 >>> c
 30
 ```
-
-
 
 ## Best practices:
 

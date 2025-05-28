@@ -1,14 +1,10 @@
-# Must check Github Pages and sites
+# Must check Github Pages and sites :heart:
 
-
-
-## Embedded Python
+## Embedded Python :dart:
 
 Must watch site for embedded and python enthusiasts.
 
 [Embedded Python: Build a Game on the BBC micro:bit – Real Python](https://realpython.com/embedded-python/)
-
-
 
 ## Mark Text
 

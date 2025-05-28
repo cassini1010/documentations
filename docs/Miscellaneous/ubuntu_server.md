@@ -23,7 +23,7 @@ To `ssh` from a Debian WSL to an Ubuntu-Server first you need to have `openssh-c
 ssh username@<ip-add of server>
 ```
 
-## to get rid of entering password to login to remote-server
+## To get rid of entering password to login to remote-server
 
 Use SSH public key encryption to get rid of typing the password all the time when you login to your server. This requires you to generate ssh keypairs.
 
@@ -82,8 +82,6 @@ In order to run a GUI application in server X11 server can be used.
 - Open PuTTY and enable the X11 configuration and login to server.
 
 - Start a GUI application Ex; gedit
-
-
 
 ```shell
 sudo apt install gedit

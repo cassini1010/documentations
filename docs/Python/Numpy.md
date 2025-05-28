@@ -25,13 +25,13 @@ Unlike Python’s standard range() function, numpy.arange() can handle non-i
 
 ## built-in max() min() and numpy's max() and min()
 
-Built in `max()` and `min()` functions allow us to find the max and min element of a list or array of single dimension. It fails when the array is of 2 or more dimension. numpy's max and min functions comes to help in this case.
+Built in `max()` and `min()` functions allow us to find the max and min element of a list or array of single dimension. It fails when the array is of two or more dimension. numpy's max and min functions comes to help in this case.
 
 ## numpy.nanmax()
 
 If the array contains missing element (happens in real time data) then the `numpy.max()` gives `nan` as a max value as max becomes unknown when there is an unknown value in the array. 
 
-`nanmax()` must beused in this case to find the max value excluding the unknown values.
+`nanmax()` must be used in this case to find the max value excluding the unknown values.
 
 ## Random number generators
 

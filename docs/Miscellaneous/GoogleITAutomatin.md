@@ -97,14 +97,6 @@ Use `perato principle` determine which task to automate
 
 - `psutil` Module
 
-
-
-
-
-
-
-
-
 ## Configuration management and the Cloud
 
 In this course we learn `puppet` which is current industry standard for configuration management.

@@ -1,4 +1,4 @@
-# String Module in Python:
+# Python String Module
 
 ### Some constants defined in this module:
 
@@ -14,11 +14,11 @@ The concatenation of the [`ascii_lowercase`](https://docs.python.org/3/library/
 
 The lowercase letters `'abcdefghijklmnopqrstuvwxyz'`. This value is not locale-dependent and will not change.
 
-### Unpacking form string:
+### Unpacking from string:
 
 ```python
-print("{0} is your first alphabet".format(*"jeevan"))
->> j is your first alphabet
+print("{0} is your first alphabet".format(*"galaxy"))
+>> g is your first alphabet
 
 
 print('{2}, {1}, {0}'.format(*'abc'))      # unpacking argument sequence
