@@ -2,6 +2,7 @@ site_name: Doc-Study
 site_url: https://cassini1010.github.io/documentations
 plugins:
   - blog
+  - search
 theme:
   features:
     - navigation.tabs

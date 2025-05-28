@@ -87,7 +87,7 @@ while a: print(a.pop(-1), end='', flush=True); print(" hello")
 
 ## docstrings in python:
 
-There are fewdocstring formats that can be used to help docstring parsers and users to have a familiar and known format. 
+There are few docstring formats that can be used to help docstring parsers and users to have a familiar and known format. 
 
 - Google docstrings : supported by Sphynx
 

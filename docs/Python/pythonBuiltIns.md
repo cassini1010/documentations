@@ -19,7 +19,7 @@ print(abs(b))
 
 `any()` and `all()` accepts an iterables.
 
-`any()` returns `True` if any on of the elements of the iterator is non-zero.
+`any()` returns `True` if any one of the elements of the iterator is non-zero.
 
 ```python
 lst = [1,3,5,7,9,0]
@@ -30,7 +30,7 @@ print(any(lst)) # False
 
 ## breakpoint()
 
-the `breakpoint()` function is used for debugging purposes. It calls the built-in debugger (usually the Python debugger, `pdb`) to allow you to interactively debug your code.
+The `breakpoint()` function is used for debugging. It calls the built-in debugger (normally the Python debugger, `pdb`) to allow you to interactively debug your code.
 
 The `breakpoint()` function can accept positional arguments (`*args`) and keyword arguments (`**kws`). These arguments are passed directly to the debugger, allowing you to customize the debugging session.
 
@@ -46,7 +46,8 @@ my_function()
 
 ## callable(object)
 
-- Note that classes are callable (calling a class returns a new instance); instances are callable if their class has a `__call__` method in it.
+- Note that classes are callable (calling a class returns a new instance)
+  instances are callable if their class has a `__call__` method in it.
 
 ```python
 class trial:
@@ -477,9 +478,19 @@ def fixture(  # noqa: F811
 ) -> Union[FixtureFunctionMarker, FixtureFunction]:
 ```
 
+The `/` symbol specifies **positional-only arguments**, meaning they **must be provided in order** and **cannot be used as keyword arguments**.
+
+```python
+def divide(a, b, /):
+    return a / b
+
+print(divide(10, 2))  # ✅ Works: Positional arguments
+print(divide(a=10, b=2))  # ❌ Error: Cannot use keyword arguments
+```
+
 ## %s in python
 
-A string can be formed using below line where `filename` nad `line` are the strings that are printed in the place of `%s`
+A string can be formed using below line where `filename` and `line` are the strings that are printed in the place of `%s`
 
 ```python
 print("Bad line in config-file %s:\n%s" % (filename,line))
@@ -710,7 +721,7 @@ with open('abcd.txt', 'r') as fp:
 
 ### mode parameter can be:
 
-| mode         | description                |
+| mode         | description                 |
 | ------------ | --------------------------- |
 | 'r'          | open the file in read mode  |
 | 'w'          | open the file in write mode |
@@ -839,8 +850,6 @@ print(15//4)
 ### Match case statements in python
 
 These are valid form python 3.10. Match case is like switch case in C.
-
-
 
 ## len()
 
