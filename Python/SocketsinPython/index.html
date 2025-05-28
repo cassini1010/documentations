@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://cassini1010.github.io/documentations/Python/SocketsinPython/">
       
       
+        <link rel="prev" href="../Python_best_practices/">
       
-      <link rel="icon" href="/documentations/assets/favicon.ico">
+      
+        <link rel="next" href="../Timing_your_python_code/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Doc-Study</title>
+        <title>Sockets in Python: - Doc-Study</title>
       
     
     
-      <link rel="stylesheet" href="/documentations/assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="/documentations/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("/documentations/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -77,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sockets-in-python" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +98,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/documentations/." title="Doc-Study" class="md-header__button md-logo" aria-label="Doc-Study" data-md-component="logo">
+    <a href="../.." title="Doc-Study" class="md-header__button md-logo" aria-label="Doc-Study" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -107,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Sockets in Python:
             
           </span>
         </div>
@@ -232,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/documentations/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -253,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentations/AI_ML/GPTResponse/" class="md-tabs__link">
+        <a href="../../AI_ML/GPTResponse/" class="md-tabs__link">
           
   
   
@@ -273,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentations/Automotive/Certificate_Based_Authentication/" class="md-tabs__link">
+        <a href="../../Automotive/Certificate_Based_Authentication/" class="md-tabs__link">
           
   
   
@@ -293,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentations/Git/Github_Workflow/" class="md-tabs__link">
+        <a href="../../Git/Github_Workflow/" class="md-tabs__link">
           
   
   
@@ -313,7 +324,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentations/Miscellaneous/Data_Structurs/" class="md-tabs__link">
+        <a href="../../Miscellaneous/Data_Structurs/" class="md-tabs__link">
           
   
   
@@ -329,11 +340,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/documentations/Python/Numpy/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Numpy/" class="md-tabs__link">
           
   
   
@@ -353,7 +366,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/documentations/blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   
@@ -387,7 +400,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/documentations/." title="Doc-Study" class="md-nav__button md-logo" aria-label="Doc-Study" data-md-component="logo">
+    <a href="../.." title="Doc-Study" class="md-nav__button md-logo" aria-label="Doc-Study" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -405,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -468,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/AI_ML/GPTResponse/" class="md-nav__link">
+      <a href="../../AI_ML/GPTResponse/" class="md-nav__link">
         
   
   
@@ -491,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/AI_ML/MachineLearning/" class="md-nav__link">
+      <a href="../../AI_ML/MachineLearning/" class="md-nav__link">
         
   
   
@@ -514,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/AI_ML/PyTorch/" class="md-nav__link">
+      <a href="../../AI_ML/PyTorch/" class="md-nav__link">
         
   
   
@@ -585,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Automotive/Certificate_Based_Authentication/" class="md-nav__link">
+      <a href="../../Automotive/Certificate_Based_Authentication/" class="md-nav__link">
         
   
   
@@ -656,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Git/Github_Workflow/" class="md-nav__link">
+      <a href="../../Git/Github_Workflow/" class="md-nav__link">
         
   
   
@@ -679,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Git/git/" class="md-nav__link">
+      <a href="../../Git/git/" class="md-nav__link">
         
   
   
@@ -750,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/Data_Structurs/" class="md-nav__link">
+      <a href="../../Miscellaneous/Data_Structurs/" class="md-nav__link">
         
   
   
@@ -773,7 +786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/Docker/" class="md-nav__link">
+      <a href="../../Miscellaneous/Docker/" class="md-nav__link">
         
   
   
@@ -796,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/Flask/" class="md-nav__link">
+      <a href="../../Miscellaneous/Flask/" class="md-nav__link">
         
   
   
@@ -819,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/GoogleITAutomatin/" class="md-nav__link">
+      <a href="../../Miscellaneous/GoogleITAutomatin/" class="md-nav__link">
         
   
   
@@ -842,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/GoogleITCourse/" class="md-nav__link">
+      <a href="../../Miscellaneous/GoogleITCourse/" class="md-nav__link">
         
   
   
@@ -865,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/Jira_Testing_Cycle/" class="md-nav__link">
+      <a href="../../Miscellaneous/Jira_Testing_Cycle/" class="md-nav__link">
         
   
   
@@ -888,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/SQL/" class="md-nav__link">
+      <a href="../../Miscellaneous/SQL/" class="md-nav__link">
         
   
   
@@ -911,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/cmdTricks/" class="md-nav__link">
+      <a href="../../Miscellaneous/cmdTricks/" class="md-nav__link">
         
   
   
@@ -934,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/general/" class="md-nav__link">
+      <a href="../../Miscellaneous/general/" class="md-nav__link">
         
   
   
@@ -957,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/global/" class="md-nav__link">
+      <a href="../../Miscellaneous/global/" class="md-nav__link">
         
   
   
@@ -980,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/smtp/" class="md-nav__link">
+      <a href="../../Miscellaneous/smtp/" class="md-nav__link">
         
   
   
@@ -1003,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Miscellaneous/ubuntu_server/" class="md-nav__link">
+      <a href="../../Miscellaneous/ubuntu_server/" class="md-nav__link">
         
   
   
@@ -1030,24 +1043,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1060,7 +1078,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -1074,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/Numpy/" class="md-nav__link">
+      <a href="../Numpy/" class="md-nav__link">
         
   
   
@@ -1097,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/PythonTricks/" class="md-nav__link">
+      <a href="../PythonTricks/" class="md-nav__link">
         
   
   
@@ -1120,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/Python_Interview_Questions/" class="md-nav__link">
+      <a href="../Python_Interview_Questions/" class="md-nav__link">
         
   
   
@@ -1143,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/Python_best_practices/" class="md-nav__link">
+      <a href="../Python_best_practices/" class="md-nav__link">
         
   
   
@@ -1163,10 +1181,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/documentations/Python/SocketsinPython/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1177,6 +1204,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1189,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/Timing_your_python_code/" class="md-nav__link">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
         
   
   
@@ -1212,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -1235,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/pyinstaller/" class="md-nav__link">
+      <a href="../pyinstaller/" class="md-nav__link">
         
   
   
@@ -1258,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/pytest/" class="md-nav__link">
+      <a href="../pytest/" class="md-nav__link">
         
   
   
@@ -1281,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/pythonBuiltIns/" class="md-nav__link">
+      <a href="../pythonBuiltIns/" class="md-nav__link">
         
   
   
@@ -1304,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/string/" class="md-nav__link">
+      <a href="../string/" class="md-nav__link">
         
   
   
@@ -1327,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/tox/" class="md-nav__link">
+      <a href="../tox/" class="md-nav__link">
         
   
   
@@ -1350,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/Python/uv/" class="md-nav__link">
+      <a href="../uv/" class="md-nav__link">
         
   
   
@@ -1423,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   
@@ -1489,7 +1517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/blog/archive/2025/" class="md-nav__link">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
         
   
   
@@ -1514,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/blog/archive/2023/" class="md-nav__link">
+      <a href="../../blog/archive/2023/" class="md-nav__link">
         
   
   
@@ -1588,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/documentations/blog/category/daily-dos%C3%A9/" class="md-nav__link">
+      <a href="../../blog/category/daily-dos%C3%A9/" class="md-nav__link">
         
   
   
@@ -1636,6 +1664,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1647,8 +1677,97 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="sockets-in-python">Sockets in Python:<a class="headerlink" href="#sockets-in-python" title="Permanent link">&para;</a></h1>
+<p>The primary socket API functions and methods in this module are:</p>
+<ul>
+<li>
+<p><code>socket()</code></p>
+</li>
+<li>
+<p><code>bind()</code></p>
+</li>
+<li>
+<p><code>listen()</code></p>
+</li>
+<li>
+<p><code>accept()</code></p>
+</li>
+<li>
+<p><code>connect()</code></p>
+</li>
+<li>
+<p><code>connect_ex()</code></p>
+</li>
+<li>
+<p><code>send()</code></p>
+</li>
+<li>
+<p><code>recv()</code></p>
+</li>
+<li>
+<p><code>close()</code></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>graph TD;
+    TCP--&gt;Transmission_Control_Protocol
+    Transmission_Control_Protocol--&gt;socket.SOCK_STREAM
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>graph TD;
+    UDP--&gt;User_Datagram_Protocol
+    User_Datagram_Protocol--&gt;socket.SOCK_DGRAM
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Simple Server Example</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>
+
+<span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+    <span class="n">sock_obj</span><span class="p">,</span> <span class="n">address_info</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">sock_obj</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;connected by </span><span class="si">{</span><span class="n">address_info</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">sock_obj</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">sock_obj</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> 
+</code></pre></div>
+<div class="highlight"><pre><span></span><code> <span class="c1"># Simple Client Example</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;127.0.0.1&#39;</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">65432</span>
+
+<span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
               </article>
             </div>
           
@@ -1744,10 +1863,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/documentations/", "features": ["navigation.tabs"], "search": "/documentations/assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/documentations/assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
