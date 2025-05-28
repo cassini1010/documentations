@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../Certificate_Based_Authentication/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../Docker/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Doc-Study</title>
+        <title>Data Structures - Doc-Study</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
       
 
@@ -39,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#data-structures" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Doc-Study" class="md-header__button md-logo" aria-label="Doc-Study" data-md-component="logo">
+    <a href=".." title="Doc-Study" class="md-header__button md-logo" aria-label="Doc-Study" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Data Structures
             
           </span>
         </div>
@@ -167,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Doc-Study" class="md-nav__button md-logo" aria-label="Doc-Study" data-md-component="logo">
+    <a href=".." title="Doc-Study" class="md-nav__button md-logo" aria-label="Doc-Study" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -185,7 +194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -207,7 +216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Certificate_Based_Authentication/" class="md-nav__link">
+      <a href="../Certificate_Based_Authentication/" class="md-nav__link">
         
   
   
@@ -226,10 +235,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Data_Structurs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Data Structures
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -240,6 +271,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collectionsdeque-pronounced-deck" class="md-nav__link">
+    <span class="md-ellipsis">
+      collections.deque (pronounced deck)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list-without-using-deque-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked list without using deque library:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -251,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Docker/" class="md-nav__link">
+      <a href="../Docker/" class="md-nav__link">
         
   
   
@@ -273,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/GPTResponse/" class="md-nav__link">
+      <a href="../GPTResponse/" class="md-nav__link">
         
   
   
@@ -295,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Github_Workflow/" class="md-nav__link">
+      <a href="../Github_Workflow/" class="md-nav__link">
         
   
   
@@ -317,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/GoogleITAutomatin/" class="md-nav__link">
+      <a href="../GoogleITAutomatin/" class="md-nav__link">
         
   
   
@@ -339,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/GoogleITCourse/" class="md-nav__link">
+      <a href="../GoogleITCourse/" class="md-nav__link">
         
   
   
@@ -361,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Jira_Testing_Cycle/" class="md-nav__link">
+      <a href="../Jira_Testing_Cycle/" class="md-nav__link">
         
   
   
@@ -383,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/MachineLearning/" class="md-nav__link">
+      <a href="../MachineLearning/" class="md-nav__link">
         
   
   
@@ -405,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Numpy/" class="md-nav__link">
+      <a href="../Numpy/" class="md-nav__link">
         
   
   
@@ -427,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/PyTorch/" class="md-nav__link">
+      <a href="../PyTorch/" class="md-nav__link">
         
   
   
@@ -449,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/PythonTricks/" class="md-nav__link">
+      <a href="../PythonTricks/" class="md-nav__link">
         
   
   
@@ -471,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Python_best_practices/" class="md-nav__link">
+      <a href="../Python_best_practices/" class="md-nav__link">
         
   
   
@@ -493,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/SocketsinPython/" class="md-nav__link">
+      <a href="../SocketsinPython/" class="md-nav__link">
         
   
   
@@ -515,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Timing_your_python_code/" class="md-nav__link">
+      <a href="../Timing_your_python_code/" class="md-nav__link">
         
   
   
@@ -537,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cmdTricks/" class="md-nav__link">
+      <a href="../cmdTricks/" class="md-nav__link">
         
   
   
@@ -559,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/general/" class="md-nav__link">
+      <a href="../general/" class="md-nav__link">
         
   
   
@@ -581,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         
   
   
@@ -603,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/global/" class="md-nav__link">
+      <a href="../global/" class="md-nav__link">
         
   
   
@@ -625,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/logging/" class="md-nav__link">
+      <a href="../logging/" class="md-nav__link">
         
   
   
@@ -647,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pyinstaller/" class="md-nav__link">
+      <a href="../pyinstaller/" class="md-nav__link">
         
   
   
@@ -669,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pytest/" class="md-nav__link">
+      <a href="../pytest/" class="md-nav__link">
         
   
   
@@ -691,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pythonBuiltIns/" class="md-nav__link">
+      <a href="../pythonBuiltIns/" class="md-nav__link">
         
   
   
@@ -713,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/smtp/" class="md-nav__link">
+      <a href="../smtp/" class="md-nav__link">
         
   
   
@@ -735,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/string/" class="md-nav__link">
+      <a href="../string/" class="md-nav__link">
         
   
   
@@ -757,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ubuntu_server/" class="md-nav__link">
+      <a href="../ubuntu_server/" class="md-nav__link">
         
   
   
@@ -789,6 +867,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collectionsdeque-pronounced-deck" class="md-nav__link">
+    <span class="md-ellipsis">
+      collections.deque (pronounced deck)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linked-list-without-using-deque-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linked list without using deque library:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -800,8 +915,163 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="data-structures">Data Structures</h1>
+<h2 id="linked-list">Linked List</h2>
+<p>Since adding and deleting of the element at the beginning and end of a list is efficient using <code>linked lists</code> , these are used to construct <code>Queues</code></p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Time Complexity of List</th>
+<th>Time Complexity of Linked List</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>add/remove element to the beginning</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td></td>
+</tr>
+<tr>
+<td>add/remove element at the end</td>
+<td>O(1)</td>
+<td>O(1)</td>
+<td></td>
+</tr>
+<tr>
+<td>Retrieve element</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>List uses indexes which is faster. Linked list uses traversing.</td>
+</tr>
+<tr>
+<td>Search for specific element</td>
+<td>O(n)</td>
+<td>O(n)</td>
+<td>Both uses traversing to search element</td>
+</tr>
+</tbody>
+</table>
+<p><code>List</code> uses contiguous memory allotment. To append to the left/head of the list it takes O(n) computations, as a new empty memory block has to be created at the beginning of the list. This operation requires existing elements to shift one position to the right resulting in <code>n</code> operations. Similarly, removing an element form the left also requires each remaining elements to be shifted to the left, resulting in <code>n-1</code> operations and hence O(n) time complexity.</p>
+<p>On the other hand append and pop form the right doesn't need shifting of <code>n</code> elements from the  list. hence O(1) time complexity.</p>
+<h2 id="collectionsdeque-pronounced-deck">collections.deque (pronounced <code>deck</code>)</h2>
+<p>This is the <code>linked list</code> implementation in python. Takes <code>O(1)</code> time complexity. Easy to insert, remove, access element from both ends of a list.</p>
+<p>Recommended to be used for the implementation of <code>queues</code> and <code>stacks</code></p>
+<p>If thread operations are used on  <code>queues</code> and <code>stacks</code> , it is recommended to use <code>Queues</code> library in python. But <code>deques</code> can also be used with some trade offs. </p>
+<p><mark><code>deques</code> have a feature to restrict the maximum length of your deques.</mark></p>
+<h2 id="linked-list-without-using-deque-library">Linked list without using <code>deque</code> library:</h2>
+<p><code>SinglyLinkedList</code> has <code>head</code> as a parameter. The efficiency can be increased a little by adding a <code>tail</code> parameter. Although <code>tail</code> parameter do not help in pop() method, it at least helps in other operations.</p>
+<pre><code class="language-python">SinglyLinkedList.py
+
+
+class EmptyLinkedList(Exception):
+    ...
+
+class Node:
+    def __init__(self, data:str) -&gt; None:
+        self.data = str(data)
+        self.next = None
+
+class SingleLinkedList:
+    def __init__(self) -&gt; None:
+        self.head = None
+        self.tail = None
+
+    def __repr__(self) -&gt; str:
+        head = self.head
+        sll_repr = []
+        while head:
+            sll_repr.append(head.data)
+            head = head.next
+        return &quot;-&gt;&quot;.join(sll_repr)
+
+    def append(self, data):
+        '''- This method doesn't use the tail parameter
+           - Uses traversal to get to the point where append
+             needs to be done.
+           - Traversal takes time for larger list O(n)'''
+        head = self.head
+        if head == None:
+            head = Node(data)
+            self.head = head
+            return None
+        while head.next:
+            head = head.next
+        head.next = Node(data)
+
+    def pop(self):
+        '''- This method doesn't use the tail parameter
+           - Uses traversal to get to the point where remove
+             needs to be done.
+           - Traversal takes time for larger list O(n)'''
+        head = self.head
+        if head == None:
+            raise EmptyLinkedList(&quot;Operating on empty linked list&quot;)
+        elif head.next == None:
+            self.head = None
+            return None
+        while head.next.next:
+            head = head.next
+        head.next = None
+
+    def tail_pop(self):
+        '''pop using tail parameter is not possible in singly linked list
+            Because tail is pointing to last element which is supposed to be removed
+            pointing it to the one element previous to tail needs another pointer
+        '''
+
+    def append_left(self, data):
+        '''append_left also takes O(1) as head pointer is always pointing to 
+        the beginning of the list'''
+        head = self.head
+        new_node = Node(data)
+        new_node.next = head
+        self.head = new_node
+
+    def pop_left(self):
+        '''pop left takes O(1) as head pointer is already there'''
+        try:
+            self.head = self.head.next
+        except AttributeError:
+            raise EmptyLinkedList(&quot;Operating on empty linked list&quot;) from None
+
+    def tail_append(self, data):
+        '''- Tail append uses tail parameter
+           - appending to the tail takes O(1) time complexity
+        '''
+        head = self.head
+        tail = self.tail
+        if head == None:
+            head = Node(data)
+            self.head, self.tail = head, head
+            return None
+        if tail == head:
+            tail = Node(data)
+            self.head.next = tail
+            self.tail = tail
+            return None
+        tail.next = Node(data)
+        self.tail = tail.next
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -837,10 +1107,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
