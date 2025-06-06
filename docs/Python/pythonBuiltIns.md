@@ -541,7 +541,7 @@ print(lst) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] Changes the list
 
 ## @staticmethod
 
-Transform a method into a static method. A static method can be called either on the class (such as `C.f()`) or on an instance (such as `C().f()`). Moreover, they can be called as regular functions (such as `f()`).
+Transform a method into a static method. A static method can be called either on the class (such as `C.f()`) or on an instance (such as `C().f()`).
 
 A static method does not receive an implicit first argument. To declare a static method, use this idiom:
 
@@ -731,7 +731,7 @@ with open('abcd.txt', 'r') as fp:
 
 | definition                                    | description                                                                                                         |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| .read(size=-1)                                | reads the file based on byte size passed.<br>default byte size is -1 which reads all teh bytes in the document.<br> |
+| .read(size=-1)                                | reads the file based on byte size passed.<br>default byte size is -1 which reads all the bytes in the document.<br> |
 | .readline(size=-1)                            | reads one line.<br>                                                                                                 |
 | .readlines()                                  | reads all the lines of a document and returns a list.                                                               |
 | *list(fp) is also equivalent to .readlines()* | where `fp`, the file object is type casted to list                                                                  |
@@ -859,3 +859,132 @@ A `range` object doesn’t store all the values but generates them when they�
 len(range(1, 20, 2))
 >> 10
 ```
+
+## weakref in python
+
+```python
+import weakref
+
+class MyClass:
+    def __init__(self, name):
+        self.name = name
+
+    def print_name(self):
+        print(self.name)
+
+my_obj = MyClass("Nitrogen")
+my_obj.print_name()
+# >>>  Nitrogen
+
+# Create weakref of my_obj
+weak_reference = weakref.ref(my_obj)
+
+# weak_ref object is callable | It must be called
+if weak_reference() is not None:
+    print("Object alive")
+else:
+    print("object Not alive")
+# >>>  Object alive
+
+# weakref object must be called and upon which its instance methods can be called
+print(weak_reference().print_name())
+
+# delete main object
+del my_obj
+
+# weakref must also be deleted
+if weak_reference() is not None:
+    print("Object alive")
+else:
+    print("object Not alive")
+# >>> object Not alive
+```
+
+## dictionary in python
+
+```python
+a = dict(one=1, two=2, three=3)
+b = {'one': 1, 'two': 2, 'three': 3}
+c = dict(zip(['one', 'two', 'three'], [1, 2, 3]))
+d = dict([('two', 2), ('one', 1), ('three', 3)])
+e = dict({'three': 3, 'one': 1, 'two': 2})
+f = dict({'one': 1, 'three': 3}, two=2)
+assert a == b == c == d == e == f
+```
+
+```python
+# list of Keys
+g = list(a)
+
+# List of Values
+h = list(a.values())
+
+# Delete an entry in dict
+del a['one']
+
+# clear all entries in a dict
+a.clear()
+
+# shallow copy a dict into other 
+i = b.copy()
+```
+
+```python
+# create a dict from 'fromkeys' method
+j = dict.fromkeys(['four', 'five', 'six', 'seven', 'eight'], None)
+
+# pop an entry by key
+j.pop('six')
+
+# pop the last entry
+print(j.popitem())
+```
+
+```python
+j.update({'seven':7})
+# OR
+j.update(seven=9)
+j
+```
+
+### Chain map
+
+```python
+from collections import ChainMap
+
+baseline = {'music': 'bach', 'art': 'rembrandt'}
+adjustments = {'art': 'van gogh', 'opera': 'carmen'}
+bboss = {'opera': [1,2,3,4,5], 'maven': 'kalmi'}
+
+# `|` can be used to chain multiple dicts, last dict considered as latest
+print(baseline|adjustments|bboss)
+
+# collections.ChainMap can be used to chain multiple dicts, first dict considered as latest
+chain_obj = ChainMap(baseline, adjustments, bboss)
+chain_obj = dict(chain_obj)
+print(chain_obj) 
+
+output: 
+>>> {'music': 'bach', 'art': 'van gogh', 'opera': [1, 2, 3, 4, 5], 'maven': 'kalmi'}
+>>> {'opera': 'carmen', 'maven': 'kalmi', 'art': 'rembrandt', 'music': 'bach'}
+```
+
+## `collections` module
+
+### Counter
+
+```python
+from collections import Counter
+
+# Tally occurrences of words in a list
+cnt = Counter()
+for word in ['red', 'blue', 'red', 'green', 'blue', 'blue']:
+    cnt[word] += 1
+print(cnt)
+```
+
+### deque
+
+Below are the methods of deque class
+
+> 'append', 'appendleft', 'clear', 'copy', 'count', 'extend', 'extendleft', 'index', 'insert', 'maxlen', 'pop', 'popleft', 'remove', 'reverse', 'rotate'

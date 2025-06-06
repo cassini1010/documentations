@@ -1,5 +1,30 @@
-# Welcome to Doc-Study
+---
+title: 👋 Welcome
+---
 
-If you are just starting your journey into Tech, specifically Python programming or some tips and tricks to code in python you've come to the right place. This website is a comprehensive resource for learning Python.
+# Hi, I'm Jeevan 👨‍💻
 
-Discover insightful articles and practical examples and tips and tricks. So, what are you waiting for. Dive in..!!!
+I'm a Python developer passionate about automating redundant and boring stuff. 
+
+---
+
+## 🛠️ My Skills
+
+- 🐍 Python (Pywinauto, FastAPI, PyTorch)
+- 📦 Packaging & Build (setuptools, uv, pyinstaller)
+- 🧠 Machine Learning (PyTorch, COCO, Mask R-CNN)
+- 🖥️ UI Testing (PyWinAuto)
+- 📘 Documentation (MkDocs, Markdown)
+
+
+## 🌐 Socials
+
+- [GitHub](https://github.com/cassini1010)
+- [LinkedIn](https://www.linkedin.com/in/jeevan-kumar-15ec070)
+
+---
+
+## 📫 Get in Touch
+
+You can reach me via [email](mailto:jeevan15070@gmail.com
+) or open an issue on [GitHub](https://github.com/cassini1010).

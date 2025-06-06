@@ -8,7 +8,7 @@ In the below example `a` ia an iterable and it is unpacked into variable and lis
 
 `*` notation is used before a variable to unpack the iterable into a `list` 
 
-```py title="tupleunpacking.py" linenums="1"
+```py
 # Tuple unpacking
 coordinates = (3, 4)
 x, y = coordinates
@@ -94,8 +94,6 @@ There are few docstring formats that can be used to help docstring parsers and u
 - reStructuredText: This is the official python documentation standard. Supported by sphynx
 
 - Numpy/SciPy docstrings: Combination of Google and reStructuredText docstrings.
-
-# 
 
 ## if-else ternary operation:
 

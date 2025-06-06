@@ -105,3 +105,67 @@ To overcome this problem below methods are followed:
 ### Digital signature
 
 B would not trust any message with which do not have a digital signature. In addition to message, A sends a Digital signature with it created by his private key. Since B knows A's public key, B can make sure the private key belongs to A by using A's public key. 
+
+## Adding a new repository to `apt`
+
+When `apt install python` is run, `apt` directs to standard repositories that are configured in `/etc/apt/sources.list` directory to find python package.
+
+If certain intended package is not found while running `apt install <app-name>` command, that signifies that the package that you are finding is not part of the standard links that are configured in the `source.list` file.
+
+For example;
+
+```bash
+sudo apt install cloudflared
+
+OUTPUT:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package cloudflared
+```
+
+> apt is unable to locate the package because the application cloudflare is not part of the standard repository links pre-configured in the source.list file
+
+### Add new configurations to source.list.d
+
+New repository links must be added in case a package is not found in the standard links. User added links must be added to a folder called `source.list.d` by creating a new file. User defined repository links must not be added in the standard `source.list` file.
+
+Example, In case of `cloudflare` below commands are run inorder to add a new repository to `apt`
+
+```bash
+# Add cloudflare gpg key
+sudo mkdir -p --mode=0755 /usr/share/keyrings
+curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
+
+# Add this repo to your apt repositories
+echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared any main' | sudo tee /etc/apt/sources.list.d/cloudflared.list
+
+# install cloudflared
+sudo apt-get update && sudo apt-get install cloudflared
+```
+
+The **GPG key** (GNU Privacy Guard key) is a **cryptographic key used to verify the authenticity** of software packages and the repository they're coming from.
+
+### 📌 Why Add a GPG Key Before Adding a Repository?
+
+When you install software using `apt` from an external source (like Cloudflare), you want to make sure:
+
+- The packages really came from Cloudflare.
+
+- The packages haven't been tampered with.
+
+To do this, **apt uses GPG keys to verify the digital signatures of the packages** in the repository.
+
+So the flow is:
+
+1. Cloudflare signs its packages with its private GPG key.
+
+2. You add the **public GPG key** to your system (the first command).
+
+3. When you run `apt`, it:
+   
+   - Checks the signature of the packages.
+   
+   - Verifies the signature using the public key you installed.
+   
+   - Refuses to install if the signature doesn’t match.

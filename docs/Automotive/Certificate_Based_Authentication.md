@@ -14,13 +14,13 @@ Uses symmetric cryptography
 
 ## PKI (Public Key Infrastructure)
 
-PKI is an asymmetrical cryptographic system which uses a pir of mathematically related  keys to send and receive message in a secure way. A message encrypted with private key can only be decrypted using public key and Vice versa is also feasible.
+PKI is an asymmetrical cryptographic system which uses a pair of mathematically related  keys to send and receive message in a secure way. A message encrypted with private key can only be decrypted using public key and Vice versa is also feasible.
 
 ## Digital Certificates
 
 Digital certificates utilize the public key infrastructure (PKI). A PKI system has two main components: a certificate authority (CA) and certificates. These certificates will be used to exchange the public keys.
 
-The digital certificates used for security reasons and many use cases:
+The digital certificates are used for security reasons and many use cases:
 
 - Secure over-the-air updates (OTA) and code signing.
 - Transport Layer Security (TLS).
@@ -45,7 +45,7 @@ Certificate consist of 3 main sections
 
 When an ECU receives the certificate, it doesn't know if the tester owns the private key. So it sends challenge to the tester to encrypt it using the testers private key. ECU verifies the received response using testers public key, hence verifying the ownership.
 
-Proof of ownership can be bidirectional if needed to protect the tester form ECU (Some systems use this kind of proof of ownership). In this case the certificate sent by the tester consists of public key, signature and a challenge to the ECU. ECU verifies the sends its certificate to the tester with public key, signature and response to the challenge
+Proof of ownership can be bidirectional if needed to protect the tester from ECU (Some systems use this kind of proof of ownership). In this case the certificate sent by the tester consists of public key, signature and a challenge to the ECU. ECU verifies the sends its certificate to the tester with public key, signature and response to the challenge
 
 ## Creating a certificate chain of trust using OpenSSL
 
@@ -100,7 +100,7 @@ Open Diagnostic data Exchange - ISO 22901 - 1
 
 `ODX-E` ECU configuration data.
 
-`ODX-FD` Funciton oriented DIagnostics
+`ODX-FD` Function oriented Diagnostics
 
 Between ODX files and within ODX files linking, Referencing and Inheritance can be seen. Understanding of which is very essential to work on ODX data.
 

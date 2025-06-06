@@ -2,7 +2,7 @@
 
 ## Wrap a generator with a context manager
 
-Wrapping a generator with a context manager helps cleanup the task when the context manager is exited. To convert a generator function into a context manager use `contextmanager` from `contextlib`.
+Wrapping a generator with a contextmanager decorator helps cleanup the task when the context manager is exited. To convert a generator function into a context manager use `contextmanager` from `contextlib`.
 
 ```python
 from contextlib import contextmanager
@@ -43,13 +43,9 @@ def dequeue(self):
 
 `from None` in the `raise` statement is used in the situations where the originally raised exception and exception raised by `raise` statement are of same exception class (Ex IndexError).
 
-when `IndexError` is already raised its is catches and another index error is raised. The first statement prints `dequeue from an empty q`  statement and another statement from the original Index error is also printed. To get rid of the original IndexError statement and print only the iser defined statement in the `raise` line, `from None` is used.
+when `IndexError` is already raised its is catches and another index error is raised. The first statement prints `dequeue from an empty q`  statement and another statement from the original Index error is also printed. To get rid of the original IndexError statement and print only the user defined statement in the `raise` line, `from None` is used.
 
 > Three basic built-in sequences in python are List, Tuples and Strings.
-
-
-
-
 
 ## list_iterator
 

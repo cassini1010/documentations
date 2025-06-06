@@ -58,3 +58,9 @@ Python is indeed an **interpreted language**, **but** it still has both a **comp
 - The **Python Virtual Machine (PVM)** then **executes** this bytecode line by line.
 
 - This is the actual “interpreting” part — where variable values are assigned, functions are called, etc.
+
+### Docstrings
+
+- The **docstring itself is just a string** — it’s **not executed** by default.
+
+- But if the docstring contains **Python code**, it can be **run using a testing tool** called: `doctest`
