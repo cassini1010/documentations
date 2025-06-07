@@ -1,4 +1,4 @@
-# Logging in python
+# Logging in Python
 
 ## Introduction
 
@@ -6,7 +6,7 @@
 import logging
 ```
 
-To use logging import logging in python file.
+To use logging, import logging in your Python file.
 
 ```python
 import logging
@@ -46,8 +46,6 @@ example.log
 
 `format` is used to format the appearance of the message in the file.
 
-
-
 ```python
 DEBUG:root:This message should go to the log file
 
@@ -55,10 +53,6 @@ INFO:root:So should this
 ```
 
 with `format='%(asctime)s : %(levelname)s : %(message)`
-
-
-
-
 
 ```python
   2023-07-27 08:43:27 AM : DEBUG : This message should go to the log file
@@ -71,7 +65,7 @@ with `format='%(asctime)s : %(levelname)s : %(message)`
 
 Four categories of logging:
 
-- Loggers
+- Logger
 
 - Handlers
 
@@ -79,7 +73,7 @@ Four categories of logging:
 
 - Formatters
 
-Its a god convention to use a module level logger in each module which uses logging
+It's a good convention to use a module-level logger in each module that uses logging.
 
 ```shell
 logger = logging.getLogger(__name__)
@@ -91,14 +85,14 @@ There can be two types of destination to which the logger can log the message:
 
 - File
 
-#### Loggers
+#### Logger
 
-Most common method of configuring loggers is to use 
+Most common method of configuring Logger is to use 
 
 ```python
-Loggers.setLevel()
-Loggers.addHandler() or Logger.removeHandler()
-Loggers.addFilter() or Logger.removeFilter()
+Logger.setLevel()
+Logger.addHandler() or Logger.removeHandler()
+Logger.addFilter() or Logger.removeFilter()
 ```
 
 #### Handlers
@@ -107,7 +101,7 @@ Commonly used handlers are StreamHandlers and FileHandlers.
 
 #### 
 
-#### <u>Example for console handler</u>
+#### Example for console handler
 
 Here it is important to set the logger level as a whole before setting the handler log level. 
 
@@ -135,13 +129,13 @@ logger.warning('warn message')
 logger.error('error message')
 logger.critical('critical message')
 
-OUTPUT :
+OUTPUT:
 2023-08-03 22:24:59,105 - __main__ - WARNING - warn message
 2023-08-03 22:24:59,106 - __main__ - ERROR - error message
 2023-08-03 22:24:59,106 - __main__ - CRITICAL - critical message
 ```
 
-#### Same logging can be achieved using a configuration file:
+#### The same logging can be achieved using a configuration file:
 
 ```python
 import logging
@@ -163,7 +157,7 @@ OUTPUT :
 ```
 
 ```ini
-[loggers]
+[Logger]
 keys=root,simpleExample
 
 [handlers]
@@ -189,5 +183,5 @@ formatter=simpleFormatter
 args=(sys.stdout,)
 
 [formatter_simpleFormatter]
-format=%(asctime)s - %(name)s - %(levelname)s - %(message)sl
+format=%(asctime)s - %(name)s - %(levelname)s - %(message)s
 ```

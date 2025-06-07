@@ -1,8 +1,8 @@
-# Python best practices
+# Python Best Practices
 
-## Wrap a generator with a context manager
+## Wrap a Generator with a Context Manager
 
-Wrapping a generator with a contextmanager decorator helps cleanup the task when the context manager is exited. To convert a generator function into a context manager use `contextmanager` from `contextlib`.
+Wrapping a generator with the `contextmanager` decorator helps clean up resources when the context manager is exited. To convert a generator function into a context manager, use `contextmanager` from `contextlib`.
 
 ```python
 from contextlib import contextmanager
@@ -35,21 +35,21 @@ arr = map(int, input().split())
 
 ```python
 def dequeue(self):
-        try:
-            return self._items.popleft()
-        except IndexError:
-            raise IndexError("dequeue from an empty queue") from None
+    try:
+        return self._items.popleft()
+    except IndexError:
+        raise IndexError("dequeue from an empty queue") from None
 ```
 
-`from None` in the `raise` statement is used in the situations where the originally raised exception and exception raised by `raise` statement are of same exception class (Ex IndexError).
+`from None` in the `raise` statement is used in situations where the originally raised exception and the exception raised by the `raise` statement are of the same exception class (e.g., `IndexError`).
 
-when `IndexError` is already raised its is catches and another index error is raised. The first statement prints `dequeue from an empty q`  statement and another statement from the original Index error is also printed. To get rid of the original IndexError statement and print only the user defined statement in the `raise` line, `from None` is used.
+When an `IndexError` is raised and caught, and another `IndexError` is raised, both the user-defined message and the original exception message are shown. Using `from None` suppresses the original exception message, so only the user-defined message is displayed.
 
-> Three basic built-in sequences in python are List, Tuples and Strings.
+> The three basic built-in sequence types in Python are lists, tuples, and strings.
 
 ## list_iterator
 
-In the below code snippet `number_iterator` is a `list_iterator` and it is used to save memory by saving one element at a time in the memory.
+In the code snippet below, `number_iterator` is a `list_iterator` and is used to save memory by storing only one element at a time in memory.
 
 The `list_iterator` allows you to access the elements of a list (or any iterable) one at a time, rather than loading all elements into memory at once. This is useful when working with large datasets or when you only need to process elements sequentially, saving memory.
 

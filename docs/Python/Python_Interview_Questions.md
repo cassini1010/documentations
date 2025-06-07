@@ -2,13 +2,13 @@
 
 ### What are mutable and immutable data types?
 
-Mutable objects value can be changed without changing their `id`. List, dict, set are the examples.
+The value of mutable objects can be changed without changing their `id`. Lists, dicts, and sets are examples.
 
-Immutable objects value cannot be changed after its creation. Any modification resullts in a new object with new `id` . int, float, str, tuple
+The value of immutable objects cannot be changed after creation. Any modification results in a new object with a new `id`. Examples include int, float, str, and tuple.
 
 ### == and is
 
-`==` compares the value of two objcets, while `is` compares the `id`` of two objects.
+`==` compares the value of two objects, while `is` compares the `id` of two objects.
 
 ### Decorator
 
@@ -16,11 +16,11 @@ A **decorator** is a function that takes another function (or method) as input, 
 
 ### Memory management
 
-It consist of 4 concepts `stack` , `heap`, `reference counting`, `garbage collection` .
+It consists of four concepts: `stack`, `heap`, `reference counting`, and `garbage collection`.
 
-Stack, stores the local variable names, return address of a funciton, etc ...
+The stack stores local variable names, the return address of a function, etc.
 
-Heap, stores the actual data/object, the referrence to this object in heap is strored as a value in the variable stored in stack.
+The heap stores the actual data or objects. The reference to an object in the heap is stored as the value of a variable in the stack.
 
 If a = 5 and id(a) = 4567342321
 
@@ -31,9 +31,9 @@ b = 5, id is same as a
 | a = 4567342321 | 5 (refcounter = 2) |
 | b = 4567342321 |                    |
 
-Object in the heap also hold another value called `reference counter`. This keeps track of how may references points to it. If this value becomes zero, it is collected by garbage collector.
+Objects in the heap also hold a value called the `reference counter`. This keeps track of how many references point to the object. If this value becomes zero, the object is collected by the garbage collector.
 
-### Python an Interpreted language
+### Python as an Interpreted Language
 
 Python is indeed an **interpreted language**, **but** it still has both a **compile-time** and a **runtime** phase — just not the same way as C or Java.
 
@@ -41,7 +41,7 @@ Python is indeed an **interpreted language**, **but** it still has both a **comp
 
 ##### 1. **Compilation Phase (to Bytecode)**
 
-- Python first **compiles your code into bytecode** (low-level, platform-independent instructions). Since bytecode is run by PVM (python virtual Machine) and not by the systems OS.
+- Python first **compiles your code into bytecode** (low-level, platform-independent instructions). This bytecode is run by the Python Virtual Machine (PVM), not by the system's operating system.
 
 - This happens **automatically**, and the result is usually stored in `.pyc` files (under `__pycache__/`).
 
@@ -61,6 +61,6 @@ Python is indeed an **interpreted language**, **but** it still has both a **comp
 
 ### Docstrings
 
-- The **docstring itself is just a string** — it’s **not executed** by default.
+- The **docstring itself is just a string** — it is **not executed** by default.
 
-- But if the docstring contains **Python code**, it can be **run using a testing tool** called: `doctest`
+- However, if the docstring contains **Python code**, it can be **run using a testing tool** called `doctest`.

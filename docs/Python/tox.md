@@ -8,18 +8,16 @@ pip install tox
 
 
 
-> After installing tox, create a empty `tox.ini` file and run `tox` command. This will generate a `.tox` folder in the project directory.
+> After installing tox, create an empty `tox.ini` file and run the `tox` command. This will generate a `.tox` folder in the project directory.
 
 
 
 ## .tox
 
-`.tox` folder contains subdirectories named `.pkg` , `.tmp` and `py` . The .pkg and py are the folders that contain python virtual environments. Among these envirinments one must use the virtual environment in the py folder for project debugging and testing. Vitual environment in .pkg folder is only used during building process. 
+The `.tox` folder contains subdirectories named `.pkg`, `.tmp`, and `py`. The `.pkg` and `py` folders contain Python virtual environments. Among these environments, you should use the virtual environment in the `py` folder for project debugging and testing. The virtual environment in the `.pkg` folder is only used during the build process.
 
-
-
-| Folder | purpose                                                         | Should you uses its interpreter |
-| ------ | --------------------------------------------------------------- | ------------------------------- |
-| .pkg   | Builds the package before testing                               | ❌                               |
-| .tmp   | Used by tox for storing cache and temporary files               | ❌                               |
-| py     | contains the virtual environment that users shuold make use of. | ✅                               |
+| Folder | Purpose                                                        | Should you use its interpreter? |
+| ------ | -------------------------------------------------------------- | ------------------------------- |
+| .pkg   | Builds the package before testing                              | ❌                              |
+| .tmp   | Used by tox for storing cache and temporary files              | ❌                              |
+| py     | Contains the virtual environment that users should make use of | ✅                              |

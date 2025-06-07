@@ -1,16 +1,16 @@
 # uv
 
-`uv` is the most popular python library used to manage project. It is written in Rust and is 10x to 100x faster than its conventional counterpart libraries in python.
+`uv` is a popular Python library used for project management. It is written in Rust and is 10x to 100x faster than conventional Python libraries for similar tasks.
 
-## create a project
+## Creating a Project
 
-Using the below command a new project directory `project_app` gets created in the location where the command is run.
+Use the following command to create a new project directory named `project_app` in the current location:
 
 ```bash
 uv init project_app
 ```
 
-This generates different files and folders as shown below. `pyproject.toml` is prefilled with a basic metadata. `.python-version` file contains the version of python used in the project.
+This command generates various files and folders as shown below. The `pyproject.toml` file is prefilled with basic metadata. The `.python-version` file specifies the version of Python used in the project.
 
 ```bash
 project_app
@@ -22,25 +22,25 @@ project_app
 │   README.md
 ```
 
-## use uv in an existing project
+## Using uv in an Existing Project
 
-To use `uv` in an existing project,  `pyproject.toml`  should not be already present in the project. 
+To use `uv` in an existing project, ensure that a `pyproject.toml` file is not already present in the project directory.
 
 ```bash
 uv init
 ```
 
-Use the above command to create the standard file structure that uv provides in the existing project. This newly created a `pyproject.toml` file and other files as described above.
+Run the above command to create the standard file structure that `uv` provides in your existing project. This will create a new `pyproject.toml` file and other files as described above.
 
-## Run main.py using uv
+## Running main.py Using uv
 
-Running `main.py` using `uv` creates a `.venv` folder and an `uv.lock` file. Running main.py using uv uses the python in the virtual environment to run the script.
+Running `main.py` with `uv` creates a `.venv` folder and a `uv.lock` file. The script is executed using the Python interpreter from the virtual environment.
 
 ```bash
 uv run main.py
 ```
 
-Folder structure after running the above command;
+The folder structure after running the above command will look like this:
 
 ```bash
 │   .venv
@@ -53,13 +53,15 @@ Folder structure after running the above command;
 │   uv.lock
 ```
 
-## adding dependencies
+## Adding Dependencies
 
-Below command can be used to add dependencies to the project. Here requests python module is added to the project. Running below command also adds the module entry in the pyproject.toml file too.
+Use the following command to add dependencies to your project. For example, to add the `requests` module:
 
 ```bash
 uv add requests
 ```
+
+This command also adds the module entry to the `pyproject.toml` file:
 
 ```bash
 dependencies = [
@@ -67,33 +69,33 @@ dependencies = [
 ]
 ```
 
-## Upgrade dependencies
+## Upgrading Dependencies
 
-This upgrades the installed package in the project.
+To upgrade an installed package in the project, use:
 
 ```bash
 uv add --upgrade requests
 ```
 
-## Remove dependencies
+## Removing Dependencies
 
-This removes requests module from the project
+To remove the `requests` module from the project, use:
 
 ```bash
 uv remove requests
 ```
 
-## Add dev dependencies
+## Adding Development Dependencies
 
-Here black module is added as a development dependency in the project and `pyproject.toml` file is also modified accordingly.
+To add a development dependency (e.g., `black`) and update the `pyproject.toml` file accordingly:
 
 ```bash
 uv add --dev black
 ```
 
-## list dependencies
+## Listing Dependencies
 
-To list dependencies one of the below commands can be used;
+To list dependencies, you can use any of the following commands:
 
 ```bash
 uv pip freeze

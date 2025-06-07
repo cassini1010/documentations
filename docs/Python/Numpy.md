@@ -1,10 +1,10 @@
 # Numpy
 
-`random` module in python uses Mersenne twister algo to generate random numbers.
+`random` module in Python uses the Mersenne Twister algorithm to generate random numbers.
 
-`numpy` uses a more efficient PCG algo.
+The `numpy` library uses a more efficient PCG (Permuted Congruential Generator) algorithm.
 
-## Basic way of creating array
+## Creating a basic array
 
 ```python
 import numpy as np
@@ -16,24 +16,24 @@ A = np.array([3, 7, 2, 4, 5])
 array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 >>> np.arange(2, 3, 0.1)
-array([ 2., 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9]).1)
+array([ 2., 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9])
 ```
 
-## range() and numpy.arange()
+## range() vs numpy.arange()
 
-Unlike Python’s standard range() function, numpy.arange() can handle non-integer increments, and it automatically generates an array with np.float elements in this case.
+Unlike Python’s built-in `range()` function, `numpy.arange()` supports non-integer step sizes and returns an array of floats when needed.
 
-## built-in max() min() and numpy's max() and min()
+## Built-in vs numpy's max() and min() functions
 
-Built in `max()` and `min()` functions allow us to find the max and min element of a list or array of single dimension. It fails when the array is of two or more dimension. numpy's max and min functions comes to help in this case.
+The built-in `max()` and `min()` functions work for one-dimensional lists or arrays, but do not handle multi-dimensional arrays. In such cases, numpy's `max()` and `min()` functions are useful.
 
 ## numpy.nanmax()
 
-If the array contains missing element (happens in real time data) then the `numpy.max()` gives `nan` as a max value as max becomes unknown when there is an unknown value in the array. 
+If the array contains missing elements (common in real-world data), `numpy.max()` will return `nan` because the maximum cannot be determined. 
 
-`nanmax()` must be used in this case to find the max value excluding the unknown values.
+`nanmax()` should be used in this case to find the maximum value while ignoring `nan` values.
 
-## Random number generators
+## Random Number Generators
 
 ### Generate random numbers
 
@@ -83,9 +83,9 @@ If you assign a tuple to `size`, then you’ll generate an array.
 .integer(size(50,32)) 50X32 array
 ```
 
-### Selecting random element from array
+### Selecting a random element from an array
 
-The `Generator` object’s [`.choice()`](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.choice.html) method allows you to select random samples from a given array.
+The `Generator` object’s [`.choice()`](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.choice.html) method allows you to select random samples from an array.
 
 ```python
 >>> import numpy as np
@@ -101,7 +101,7 @@ array([[ 8, 12, 11],
        [10,  7,  5]])
 ```
 
-If you set `replace` to `False`, then you can’t select the same element more than once. By default, it’s set to `True`, meaning the same element *might* be selected multiple times.
+If you set `replace=False`, the same element cannot be selected more than once. By default, `replace` is `True`, so elements may be selected multiple times.
 
 ### Generate normally distributed random numbers
 

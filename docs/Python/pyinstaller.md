@@ -1,4 +1,4 @@
-# Pyinstaller
+# PyInstaller
 
 - `pyinstaller` is the main command to build a bundled application.
 
@@ -12,12 +12,12 @@
 
 - `pyi-set_version` can be used to apply previously-extracted version resource to an existing Windows executable.
 
-### <mark>One folder bundle is faster than the single file bundle.</mark>
+> One folder bundle is faster than the single file bundle
 
 ## Hiding the Source Code
 
-The bundled app does not include any source code. However, PyInstaller bundles compiled Python scripts (`.pyc` files). These could in principle be de-compiled to reveal the logic of your code.
+The bundled app does not include any source code. However, PyInstaller bundles compiled Python scripts (`.pyc` files), which could, in principle, be decompiled to reveal the logic of your code.
 
-If you want to hide your source code more thoroughly, one possible option is to compile some of your modules with [Cython](http://www.cython.org/). Using Cython you can convert Python modules into C and compile the C to machine language. PyInstaller can follow import statements that refer to Cython C object modules and bundle them.
+If you want to hide your source code more thoroughly, one option is to compile some of your modules with `Cython`. Using Cython, you can convert Python modules into C and then compile the C code to machine language. PyInstaller can follow import statements that refer to Cython C object modules and bundle them.
 
-`pyinstaller.exe` takes either the `.py` python file or the `.spec` file as a scriptname argument.
+`pyinstaller.exe` takes either the `.py` python file or the `.spec` file as the scriptname argument.

@@ -4,8 +4,7 @@
 
 ### `__tracebackhide__`
 
-The assert_identical function sets **tracebackhide** = True. This is optional. The effect
-will be that failing tests will not include this function in the traceback.
+The `assert_identical` function sets `__tracebackhide__ = True`. This is optional. The effect is that failing tests will not include this function in the traceback.
 
 ```python
 from cards import Card
@@ -16,7 +15,7 @@ def assert_identical(c1: Card, c2: Card):
     __tracebackhide__ = True
     assert c1 == c2
     if c1.id != c2.id:
-        pytest.fail(f"id's don't match. {c1.id} != {c2.id}")
+        pytest.fail(f"id's don't match: {c1.id} != {c2.id}")
 
 
 def test_identical():
@@ -31,9 +30,9 @@ def test_identical_fail():
     assert_identical(c1, c2)
 ```
 
-### outcomes of test
+###### Test Outcomes
 
-Outcomes of test can be
+The possible test outcomes are:
 
 ```shell
 PASSED (.)
@@ -46,7 +45,7 @@ ERROR (E)
 
 ### Testing expected exception
 
-The normal try-catch block is not suitable for testing expected exceptions. Below code passes if exceptions raised and fails if it is not raised. But a try-catch block passes the test if exception is raised and caught and it also passes the test of the exception is not raised.
+A normal try-except block is not suitable for testing expected exceptions. The code below passes if an exception is raised and fails if it is not. However, a try-except block passes the test if the exception is raised and caught, and also passes if the exception is not raised, which is not ideal for testing.
 
 ```python
 import cards
@@ -61,7 +60,7 @@ def test_no_path_fail():
 
 ## pytest fixtures
 
-Below example code represents fixtures in pytest, where first test passes, second results in Error and third fails.
+The example code below demonstrates fixtures in pytest. The first test passes, the second results in an error, and the third fails.
 
 ```python
 """Demonstrate simple fixtures."""
@@ -89,7 +88,7 @@ def some_other_data():
 
 
 def test_other_data(some_other_data):
-    """Try to use failing fixture."""
+    """Attempt to use a failing fixture."""
     assert some_other_data == 42
 
 
@@ -102,7 +101,7 @@ def a_tuple():
 
 
 def test_a_tuple(a_tuple):
-    """Demo the a_tuple fixture."""
+    """Demonstrate the a_tuple fixture."""
     assert a_tuple[3]["bar"] == 32
 
 
@@ -111,11 +110,11 @@ def test_a_tuple(a_tuple):
 >>> test_fixtures.py::test_a_tuple FAILED  
 ```
 
-**If a test results in “Fail,” the failure is somewhere in the test function (or something the function called). If a test results in “Error,” the failure is somewhere in a fixture.**
+**If a test results in "Fail," the failure is in the test function (or something it called). If a test results in "Error," the failure is in a fixture.**
 
 ### tracing fixture execution
 
-When two or more test functions use the same fixture, we can visually see how/when the fixture is called using `pytest --setup-show` flag.
+When two or more test functions use the same fixture, you can see how and when the fixture is called by using the `pytest --setup-show` flag.
 
 ```python
 from pathlib import Path
@@ -153,17 +152,12 @@ def test_two(cards_db):
         TEARDOWN F cards_db
 ```
 
-
-
 ### Finding where fixtures are defined
 
-We can have conftest.py files at really every level of our test directory. Tests can use
-any fixture that is in the same test module as a test function, or in a conftest.py
-file in the same directory, or in any level of parent directory up to the root of
-the tests.
+You can have `conftest.py` files at any level of your test directory. Tests can use any fixture that is in the same test module, in a `conftest.py` file in the same directory, or in any parent directory up to the root of the tests.
 
 ```python
-pytest --fixtures # will bring all the locations of where fixtures are defined
+pytest --fixtures # shows all the locations where fixtures are defined
 ```
 
 ```python
@@ -171,23 +165,19 @@ pytest --fixtures-per-test <folder name or testFile name>
 # prints the fixtures used in test functions
 ```
 
-
-
 ## Parameterization
 
-There are three types aof parameterization
+There are three types of parameterization:
 
 - Parameterising functions
 
 - Parameterising fixtures
 
--  Using a hook function called pytest_generate_tests
-
-
+- Using a hook function called `pytest_generate_tests`
 
 ### Parameterizing test function
 
-Test function takes `pytest.mark.parametrize` decorator to achieve this. This takes variable names nd list of parameter values. Variable names can be comma separated strings or list of strings. Values must be in a list (list of tuples).
+A test function uses the `pytest.mark.parametrize` decorator for parameterization. This decorator takes variable names and a list of parameter values. Variable names can be a comma-separated string or a list of strings. Values must be provided as a list (or list of tuples).
 
 ```python
 # test_func_param.py
@@ -203,19 +193,13 @@ Test function takes `pytest.mark.parametrize` decorator to achieve this. This ta
 )
 def test_finish(cards_db, start_summary, start_state): 
     ...
-
-
 ```
 
-
-
-### Selecting one test when parameterized
+### Selecting a Single Parameterized Test
 
 ```shell
  pytest -v "test_func_param.py::test_finish[write a book-done]"
 ```
-
-
 
 ### Parameterizing fixture
 
@@ -228,9 +212,7 @@ def test_finish(cards_db, start_state):
     ...
 ```
 
-
-
-### Parameterize using hook function `pytest_generate_test`
+### Parameterize using the hook function `pytest_generate_test`
 
 ```python
 def pytest_generate_tests(metafunc):
@@ -239,14 +221,11 @@ def pytest_generate_tests(metafunc):
 
 def test_finish(cards_db, start_state): 
     ...
-
 ```
-
-
 
 ### How to manage logging:
 
-Simply pass the name of the test file to be tested to pytest to test it.
+Simply pass the name of the test file to pytest to run the tests.
 
 ```python
 pytest test_one.py # tests all the test functions in this python file
@@ -267,13 +246,13 @@ def  test_apple():
     print("this is a print statement")
 ```
 
-Running the above code using `pytest` is not going to show any logging messages or the print statement on the console nor a log file is given as an output.
+Running the above code using `pytest` will not show any logging messages or print statements on the console, nor will it produce a log file.
 
-Using `pytest --capture=no` to run the test is going to print only the `print` statements on the console. Here `this is a print statement` prints on the console and all the logging messages are neglected.
+Using `pytest --capture=no` will print only the `print` statements to the console. In this case, `this is a print statement` will be printed, but all logging messages will be ignored.
 
 ##### Print logging statements to console:
 
-To print the logging messages too to the console it is advisable to write a pytest configuration file with logging configurations in it and use **`caplog`** fixture to the test.
+To print logging messages to the console, it is advisable to write a pytest configuration file with logging settings and use the **`caplog`** fixture in your test.
 
 ```ini
 pytest.ini file
@@ -309,9 +288,9 @@ test_leet.py this is a print statement
 
 ##### Print logging messages in a log file:
 
-Below configurations can be made in `pytest.ini` file to log logging messages in a file.
+The following configurations can be added to the `pytest.ini` file to log messages to a file.
 
-No `caplog` fixture to be used.
+Do not use the `caplog` fixture in this case.
 
 ```python
 import logging
@@ -344,7 +323,7 @@ in /log/logging.log
 07:39:08 ERROR LEET error message
 ```
 
-NOTE : **print statements are not printed**
+**Note: Print statements are not included in the log file.**
 
 ##### Print `logging` and `print` statements to console and log file:
 
@@ -360,9 +339,9 @@ logfile_date_format=%Y-%m-%d %H:%M:%S
 log_auto_indent=true
 ```
 
-Run `pytest --capture=no` 
+Run `pytest --capture=no` to print both logging and print statements to the console.
 
-# Handling test failures:
+# Handling Test failures:
 
 ```python
 pytest -x # stop after first failure
@@ -389,9 +368,9 @@ pdb.set_trace() ''' add this line where-ever
 executions needs to jump to pdb'''
 ```
 
-# Managing pytest output:
+# Managing Pytest Output:
 
-`pytest --tb` is helpful to log a detailed or rather short traceback when a test fails.
+`pytest --tb` is helpful for logging a detailed or shortened traceback when a test fails.
 
 ```python
 pytest --tb=mode #Traceback print mode (auto/long/short/line/native/no)
@@ -399,7 +378,7 @@ pytest --tb=mode #Traceback print mode (auto/long/short/line/native/no)
 
 `pytest --full-trace` is going to log a whole trace traversed by the test when it fails.
 
-great way to understand the flow of the test script.
+This is a great way to understand the flow of the test script.
 
 `pytest -v` increases verbosity of logging 
 
@@ -407,19 +386,19 @@ great way to understand the flow of the test script.
 
 ###### Creating JUnit format output files:
 
-`pytest --junitxml=log.xml`  will create a log file `log.xml` with the standard log details in it.
+`pytest --junitxml=log.xml`  will create a log file named `log.xml` with the standard log details.
 
-`pytest --full-trace --junitxml.log.xml` is an efficient way to analyze code in depth when a test fails.
+`pytest --full-trace --junitxml=log.xml` is an efficient way to analyze code in depth when a test fails.
 
-### The best feature of pytest is `pastebin`
+### The Pastebin Feature in Pytest
 
 `--pastebin=mode`       Send **failed|all** info to bpaste.net pastebin service.
 
-sending all or failed mode to pastebin service creates an instant URL which contains the whole test session log details.
+Sending all or failed test results to the pastebin service creates an instant URL containing the entire test session log details.
 
 This URL can be used to share the log results with other collaborators.
 
-# Temporary Directories and files in pytest:
+# Temporary Directories and Files in Pytest:
 
 ```python
 # from pytest import TempPathFactory
@@ -438,7 +417,7 @@ def test_groot(tmp_path_factory):
         fl.write("Dustin")
 ```
 
-By running `pytest --basetemp=TEMP` creates a base temp directory in the project directory itself and below folder structure is created.
+Running `pytest --basetemp=TEMP` creates a base temporary directory in the project directory, resulting in the following folder structure:
 
 ```shell
 C:.
@@ -449,25 +428,25 @@ C:.
         hello.txt
 ```
 
-# Linting the pytest scripts:
+# Linting Pytest Scripts:
 
 ```python
 pip install flake8-pytest-style
 ```
 
- `flake8-pytest-style` is a  `flake8` plugin checking common style issues or inconsistencies with `pytest`-based tests. Could be a helpful tool.
+`flake8-pytest-style` is a `flake8` plugin that checks for common style issues or inconsistencies in `pytest`-based tests. It can be a helpful tool.
 
-# Changing standard test discovery:
+# Changing Standard Test Discovery:
 
-`--ignore=path` ignores the test present in the folder path given. path can also be a specific python test file to ignore.
+`--ignore=path` ignores tests in the specified folder path. The path can also be a specific Python test file to ignore.
 
-`--ignore-glob='*_01.p_'`  will ignore all the files which ends with glob pattern given.
+`--ignore-glob='*_01.p_'` will ignore all files that match the given glob pattern.
 
-pytest discovers tests by recursively searching the directory passed as an argument or current directory if no path is sent as an argument.
+Pytest discovers tests by recursively searching the directory passed as an argument, or the current directory if no path is provided.
 
 `pytest src/temp/`  or `pytest`
 
-If, `norecursedirs` option is set in pytest.ini file then the it tells pytest not to recurse into these directories to find test files.
+If the `norecursedirs` option is set in the pytest.ini file, pytest will not recurse into these directories to find test files.
 
 ```ini
 [pytest]
@@ -485,13 +464,13 @@ python_classes=Groot
 python_functions=groot_*
 ```
 
-The other way to ignore the test files or folder in pytest is to provide the file of folder name in a standard list in pytest in <mark>conftest.py</mark> file
+Another way to ignore test files or folders in pytest is to provide the file or folder name in a standard list in the `conftest.py` file.
 
 `collect_ignore` and `collect_ignore_glob`
 
-# Fixtures:
+# Fixtures
 
-`capsys` and `capsysbinary` are the built-in fixtures to capture the text in `sys.stdout` and `sys.stderr` 
+`capsys` and `capsysbinary` are built-in fixtures used to capture text from `sys.stdout` and `sys.stderr`.
 
 ```python
 def test_output(capsys):
@@ -501,7 +480,7 @@ def test_output(capsys):
     assert captured.out == b"hello\n" # for capsysbinary
 ```
 
-`capfd` and `capfdbinary` are the built-in fixtures used to capture the text from file descriptors `1` and `2` 
+`capfd` and `capfdbinary` are built-in fixtures used to capture text from file descriptors 1 and 2.
 
 ```batch
 where python 1>NUL //1 captures the output from terminal and directs it to NUL
@@ -517,15 +496,9 @@ def test_system_echo(capfd):
 
 ###### The `readouterr()` method in `capsys, capsysbinary, capfd, capfdbinary` returns `(out,err)` which is a tuple.
 
-
-
-
-
-
-
 ## Configuration files in pytest
 
-Below files can be used as configuration files for a pytest project.
+The following files can be used as configuration files for a pytest project.
 
 - pytest.ini
 
