@@ -1,6 +1,7 @@
 ---
 title: 👋 Welcome
 ---
+![Jeevan Kumar Profile Picture](assets\jkprofile.png)
 
 # Hi, I'm Jeevan 👨‍💻
 
